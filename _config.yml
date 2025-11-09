@@ -1,0 +1,45 @@
+# Site settings
+title: "Tales From The Friendly Arm Inn"
+description: "Complete quest guide and database for EET, IWD1-EET, and IWD2-EET mods for Baldur's Gate"
+baseurl: ""
+url: "https://yourusername.github.io"
+
+# Build settings
+markdown: kramdown
+permalink: pretty
+
+# Collections
+collections:
+  quests:
+    output: true
+    permalink: /:collection/:path/
+
+# Defaults
+defaults:
+  - scope:
+      path: ""
+      type: "quests"
+    values:
+      layout: "quest"
+  - scope:
+      path: ""
+    values:
+      layout: "default"
+
+# Languages
+languages: ["ja", "en"]
+default_lang: "ja"
+exclude_from_localization: ["assets", "_data"]
+
+# Plugins
+plugins:
+  - jekyll-feed
+  - jekyll-seo-tag
+
+# Exclude from processing
+exclude:
+  - Gemfile
+  - Gemfile.lock
+  - node_modules
+  - vendor
+  - README.md

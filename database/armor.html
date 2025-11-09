@@ -1,0 +1,29 @@
+---
+layout: database
+title: 防具データベース
+description: EET、IWD1-EET、IWD2-EETで入手可能な全防具の詳細情報
+lang: ja
+filters:
+  - label: すべて
+    value: all
+  - label: 重装鎧
+    value: heavy_armor
+  - label: 中装鎧
+    value: medium_armor
+  - label: 軽装鎧
+    value: light_armor
+  - label: ローブ
+    value: robe
+---
+
+<div class="database-grid">
+  {% for armor in site.data.armor %}
+    {% include item-card.html item=armor %}
+  {% endfor %}
+</div>
+
+{% if site.data.armor.size == 0 %}
+<div class="empty-state">
+  <p>現在、防具データは登録されていません。今後追加予定です。</p>
+</div>
+{% endif %}

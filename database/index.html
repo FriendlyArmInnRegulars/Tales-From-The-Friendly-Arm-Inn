@@ -1,0 +1,101 @@
+---
+layout: default
+title: データベース
+lang: ja
+---
+
+<div class="database-index">
+  <h1>データベース</h1>
+  <p class="intro">EET、IWD1-EET、IWD2-EETに登場するアイテム、NPC、敵、魔法の包括的なデータベースです。</p>
+
+  <div class="database-categories">
+    <div class="category-card">
+      <h2>⚔️ 武器</h2>
+      <p>すべての武器の詳細なステータスと入手場所</p>
+      <a href="{{ '/database/weapons.html' | relative_url }}" class="btn">武器を見る</a>
+    </div>
+
+    <div class="category-card">
+      <h2>🛡️ 防具</h2>
+      <p>鎧、盾、兜などの防具データベース</p>
+      <a href="{{ '/database/armor.html' | relative_url }}" class="btn">防具を見る</a>
+    </div>
+
+    <div class="category-card">
+      <h2>💎 アイテム</h2>
+      <p>ポーション、巻物、宝石、その他アイテム</p>
+      <a href="{{ '/database/items.html' | relative_url }}" class="btn">アイテムを見る</a>
+    </div>
+
+    <div class="category-card">
+      <h2>👥 NPC</h2>
+      <p>仲間NPCと重要キャラクターの情報</p>
+      <a href="{{ '/database/npcs.html' | relative_url }}" class="btn">NPCを見る</a>
+    </div>
+
+    <div class="category-card">
+      <h2>👹 敵</h2>
+      <p>ボスと敵キャラクターの攻略情報</p>
+      <a href="{{ '/database/enemies.html' | relative_url }}" class="btn">敵を見る</a>
+    </div>
+
+    <div class="category-card">
+      <h2>✨ 魔法</h2>
+      <p>すべての魔法の詳細と使用戦略</p>
+      <a href="{{ '/database/spells.html' | relative_url }}" class="btn">魔法を見る</a>
+    </div>
+  </div>
+</div>
+
+<style>
+.database-index {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.database-index h1 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #666;
+}
+
+.database-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.category-card {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  text-align: center;
+  transition: transform 0.3s, box-shadow 0.3s;
+  border: 2px solid var(--border-color);
+}
+
+.category-card:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.category-card h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.8rem;
+}
+
+.category-card p {
+  margin-bottom: 1.5rem;
+  color: #666;
+}
+</style>

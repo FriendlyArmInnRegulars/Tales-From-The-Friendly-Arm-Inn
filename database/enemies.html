@@ -1,0 +1,113 @@
+---
+layout: database
+title: 敵データベース
+description: EET、IWD1-EET、IWD2-EETのボスと敵の攻略情報
+lang: ja
+filters:
+  - label: すべて
+    value: all
+  - label: ボス
+    value: boss
+  - label: 一般敵
+    value: common
+  - label: アンデッド
+    value: undead
+  - label: ドラゴン
+    value: dragon
+---
+
+<div class="enemy-list">
+  {% for enemy in site.data.enemies %}
+  <div class="enemy-card database-item" data-type="{{ enemy.type }}">
+    {% if enemy.image %}
+    <div class="enemy-image">
+      <img src="{{ enemy.image | relative_url }}" alt="{{ enemy.name[page.lang] | default: enemy.name.ja }}">
+    </div>
+    {% endif %}
+
+    <div class="enemy-info">
+      <h3 class="enemy-name">{{ enemy.name[page.lang] | default: enemy.name.ja }}</h3>
+
+      <div class="enemy-stats">
+        {% if enemy.hp %}<span><strong>HP:</strong> {{ enemy.hp }}</span>{% endif %}
+        {% if enemy.ac %}<span><strong>AC:</strong> {{ enemy.ac }}</span>{% endif %}
+        {% if enemy.thac0 %}<span><strong>THAC0:</strong> {{ enemy.thac0 }}</span>{% endif %}
+        {% if enemy.xp %}<span><strong>XP:</strong> {{ enemy.xp }}</span>{% endif %}
+      </div>
+
+      {% if enemy.resistances %}
+      <div class="enemy-resistances">
+        <h4>耐性</h4>
+        <ul>
+          {% for resistance in enemy.resistances %}
+          <li><strong>{{ resistance[0] }}:</strong> {{ resistance[1] }}%</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if enemy.vulnerabilities %}
+      <div class="enemy-vulnerabilities">
+        <h4>弱点</h4>
+        <ul>
+          {% for vuln in enemy.vulnerabilities[page.lang] %}
+          <li>{{ vuln }}</li>
+          {% endfor %}
+        </ul>
+      </div>
+      {% endif %}
+
+      {% if enemy.strategy %}
+      <div class="enemy-strategy">
+        <h4>攻略法</h4>
+        <p>{{ enemy.strategy[page.lang] | default: enemy.strategy.ja }}</p>
+      </div>
+      {% endif %}
+
+      {% if enemy.location %}
+      <p class="enemy-location">
+        <strong>出現場所:</strong> {{ enemy.location[page.lang] | default: enemy.location.ja }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% if site.data.enemies.size == 0 %}
+<div class="empty-state">
+  <p>現在、敵データは登録されていません。今後追加予定です。</p>
+</div>
+{% endif %}
+
+<style>
+.enemy-card {
+  margin-bottom: 2rem;
+}
+
+.enemy-stats {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin: 1rem 0;
+  padding: 0.75rem;
+  background-color: var(--background-color);
+  border-radius: 4px;
+}
+
+.enemy-resistances, .enemy-vulnerabilities, .enemy-strategy {
+  margin: 1rem 0;
+  padding: 1rem;
+  background-color: var(--background-color);
+  border-radius: 4px;
+}
+
+.enemy-resistances h4, .enemy-vulnerabilities h4, .enemy-strategy h4 {
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+}
+
+.enemy-resistances ul, .enemy-vulnerabilities ul {
+  margin-left: 1.5rem;
+}
+</style>

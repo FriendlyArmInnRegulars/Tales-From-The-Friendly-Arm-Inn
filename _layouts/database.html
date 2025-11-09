@@ -1,0 +1,63 @@
+---
+layout: default
+---
+
+<div class="database-container">
+  <header class="database-header">
+    <h1>{{ page.title }}</h1>
+    {% if page.description %}
+    <p class="database-description">{{ page.description }}</p>
+    {% endif %}
+  </header>
+
+  <div class="database-filters">
+    <input type="text" id="search-input" placeholder="{% if page.lang == 'en' %}Search...{% else %}検索...{% endif %}">
+
+    {% if page.filters %}
+    <div class="filter-buttons">
+      {% for filter in page.filters %}
+      <button class="filter-btn" data-filter="{{ filter.value }}">{{ filter.label }}</button>
+      {% endfor %}
+    </div>
+    {% endif %}
+  </div>
+
+  <div class="database-content">
+    {{ content }}
+  </div>
+</div>
+
+<script>
+// Simple search and filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const searchInput = document.getElementById('search-input');
+  const filterButtons = document.querySelectorAll('.filter-btn');
+  const items = document.querySelectorAll('.database-item');
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function(e) {
+      const query = e.target.value.toLowerCase();
+      items.forEach(item => {
+        const text = item.textContent.toLowerCase();
+        item.style.display = text.includes(query) ? '' : 'none';
+      });
+    });
+  }
+
+  filterButtons.forEach(btn => {
+    btn.addEventListener('click', function() {
+      const filter = this.dataset.filter;
+      filterButtons.forEach(b => b.classList.remove('active'));
+      this.classList.add('active');
+
+      items.forEach(item => {
+        if (filter === 'all' || item.dataset.type === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+});
+</script>

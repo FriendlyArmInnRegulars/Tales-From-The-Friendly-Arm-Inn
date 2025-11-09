@@ -1,0 +1,25 @@
+[
+  {
+    "id": "example_sword",
+    "name": {
+      "ja": "例：炎の剣+2",
+      "en": "Example: Flame Sword +2"
+    },
+    "type": "longsword",
+    "enchantment": 2,
+    "damage": "1d8+2",
+    "special": {
+      "ja": "追加1d4炎ダメージ",
+      "en": "Additional 1d4 fire damage"
+    },
+    "thac0": 2,
+    "weight": 4,
+    "speed": 3,
+    "location": {
+      "ja": "EET: ダーゴンの洞窟",
+      "en": "EET: Durlag's Tower"
+    },
+    "usable_by": ["fighter", "paladin", "ranger", "bard"],
+    "image": "/assets/images/items/flame_sword.png"
+  }
+]

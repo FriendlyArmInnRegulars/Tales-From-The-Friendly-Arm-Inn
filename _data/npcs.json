@@ -1,0 +1,30 @@
+[
+  {
+    "id": "example_npc",
+    "name": "Minsc",
+    "race": "Human",
+    "class": "Ranger",
+    "alignment": "Lawful Good",
+    "description": {
+      "ja": "ミンスクはラシーメン出身のレンジャーで、ハムスターのブーと共に旅をしている。",
+      "en": "Minsc is a ranger from Rashemen, traveling with his hamster Boo."
+    },
+    "stats": {
+      "str": 18,
+      "dex": 15,
+      "con": 16,
+      "int": 8,
+      "wis": 6,
+      "cha": 9
+    },
+    "location": {
+      "ja": "EET: ナシュケルの街",
+      "en": "EET: Nashkel"
+    },
+    "recruitment": {
+      "ja": "ダイナヘアの救出クエストを受ける",
+      "en": "Accept the quest to rescue Dynaheir"
+    },
+    "image": "/assets/images/npcs/minsc.png"
+  }
+]

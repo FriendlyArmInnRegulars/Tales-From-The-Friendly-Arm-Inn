@@ -1,0 +1,128 @@
+---
+layout: default
+title: ガイド
+lang: ja
+---
+
+<div class="guides-index">
+  <h1>ガイド</h1>
+  <p class="intro">EET、IWD1-EET、IWD2-EETを楽しむための各種ガイド集</p>
+
+  <div class="guide-categories">
+    <section class="guide-section">
+      <h2>🎮 初心者ガイド</h2>
+      <p>これからEETを始める方向けの基本情報</p>
+      <ul>
+        <li>EET Modとは？</li>
+        <li>キャラクター作成ガイド</li>
+        <li>戦闘の基本</li>
+        <li>パーティ編成のコツ</li>
+      </ul>
+    </section>
+
+    <section class="guide-section">
+      <h2>⚔️ クラスビルドガイド</h2>
+      <p>各クラスの効果的なビルド例</p>
+      <ul>
+        <li>ファイター系ビルド</li>
+        <li>ローグ系ビルド</li>
+        <li>魔法使い系ビルド</li>
+        <li>僧侶系ビルド</li>
+        <li>マルチクラス・デュアルクラスガイド</li>
+      </ul>
+    </section>
+
+    <section class="guide-section">
+      <h2>🔧 Mod導入ガイド</h2>
+      <p>EETおよび関連Modのインストール方法</p>
+      <ul>
+        <li>EETのインストール</li>
+        <li>IWD1-EETの統合</li>
+        <li>IWD2-EETの統合</li>
+        <li>推奨Mod</li>
+        <li>トラブルシューティング</li>
+      </ul>
+    </section>
+
+    <section class="guide-section">
+      <h2>📖 攻略Tips</h2>
+      <p>冒険を有利に進めるためのヒント集</p>
+      <ul>
+        <li>序盤の効率的な進め方</li>
+        <li>金策ガイド</li>
+        <li>経験値稼ぎスポット</li>
+        <li>強力な装備の入手場所</li>
+        <li>難易度別攻略アドバイス</li>
+      </ul>
+    </section>
+  </div>
+</div>
+
+<style>
+.guides-index h1 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #666;
+}
+
+.guide-categories {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+}
+
+.guide-section {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border-color);
+  transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.guide-section:hover {
+  transform: translateY(-5px);
+  box-shadow: var(--shadow-hover);
+}
+
+.guide-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+}
+
+.guide-section p {
+  color: #666;
+  margin-bottom: 1rem;
+}
+
+.guide-section ul {
+  list-style: none;
+  padding-left: 0;
+}
+
+.guide-section li {
+  padding: 0.5rem 0;
+  border-bottom: 1px solid var(--border-color);
+  color: var(--primary-color);
+  cursor: pointer;
+  transition: padding-left 0.3s;
+}
+
+.guide-section li:hover {
+  padding-left: 0.5rem;
+  color: var(--secondary-color);
+}
+
+.guide-section li:last-child {
+  border-bottom: none;
+}
+</style>

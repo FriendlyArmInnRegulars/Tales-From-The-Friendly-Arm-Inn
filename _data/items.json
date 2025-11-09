@@ -1,0 +1,21 @@
+[
+  {
+    "id": "example_potion",
+    "name": {
+      "ja": "例：特級治療のポーション",
+      "en": "Example: Potion of Superior Healing"
+    },
+    "type": "potion",
+    "effect": {
+      "ja": "HP 4d8+4 回復",
+      "en": "Heals 4d8+4 HP"
+    },
+    "stackable": true,
+    "weight": 1,
+    "location": {
+      "ja": "EET: 寺院、薬草店",
+      "en": "EET: Temples, Apothecaries"
+    },
+    "image": "/assets/images/items/potion_healing.png"
+  }
+]

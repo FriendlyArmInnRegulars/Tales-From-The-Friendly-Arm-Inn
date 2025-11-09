@@ -1,0 +1,45 @@
+<header class="site-header">
+  <div class="header-container">
+    <div class="site-logo">
+      <a href="{{ '/' | relative_url }}">
+        <h1>{{ site.title }}</h1>
+      </a>
+    </div>
+
+    <nav class="site-nav">
+      <button class="nav-toggle" aria-label="Toggle navigation">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+
+      <ul class="nav-menu">
+        {% for item in site.data.navigation.main %}
+        <li class="nav-item {% if item.submenu %}has-submenu{% endif %}">
+          <a href="{{ item.url | relative_url }}">
+            {{ item.title[page.lang] | default: item.title.ja }}
+          </a>
+
+          {% if item.submenu %}
+          <ul class="submenu">
+            {% for subitem in item.submenu %}
+            <li>
+              <a href="{{ subitem.url | relative_url }}">
+                {{ subitem.title[page.lang] | default: subitem.title.ja }}
+              </a>
+            </li>
+            {% endfor %}
+          </ul>
+          {% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </nav>
+
+    <div class="language-switcher">
+      <a href="{{ page.url | remove: '/en' | relative_url }}" class="lang-link {% if page.lang == 'ja' %}active{% endif %}">日本語</a>
+      <span class="lang-separator">/</span>
+      <a href="{{ '/en' | append: page.url | relative_url }}" class="lang-link {% if page.lang == 'en' %}active{% endif %}">English</a>
+    </div>
+  </div>
+</header>

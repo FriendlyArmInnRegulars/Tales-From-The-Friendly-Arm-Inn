@@ -1,0 +1,99 @@
+{
+  "main": [
+    {
+      "title": {
+        "ja": "ホーム",
+        "en": "Home"
+      },
+      "url": "/"
+    },
+    {
+      "title": {
+        "ja": "クエスト",
+        "en": "Quests"
+      },
+      "url": "/quests/",
+      "submenu": [
+        {
+          "title": {
+            "ja": "EET クエスト",
+            "en": "EET Quests"
+          },
+          "url": "/quests/eet/"
+        },
+        {
+          "title": {
+            "ja": "IWD1-EET クエスト",
+            "en": "IWD1-EET Quests"
+          },
+          "url": "/quests/iwd1-eet/"
+        },
+        {
+          "title": {
+            "ja": "IWD2-EET クエスト",
+            "en": "IWD2-EET Quests"
+          },
+          "url": "/quests/iwd2-eet/"
+        }
+      ]
+    },
+    {
+      "title": {
+        "ja": "データベース",
+        "en": "Database"
+      },
+      "url": "/database/",
+      "submenu": [
+        {
+          "title": {
+            "ja": "武器",
+            "en": "Weapons"
+          },
+          "url": "/database/weapons.html"
+        },
+        {
+          "title": {
+            "ja": "防具",
+            "en": "Armor"
+          },
+          "url": "/database/armor.html"
+        },
+        {
+          "title": {
+            "ja": "アイテム",
+            "en": "Items"
+          },
+          "url": "/database/items.html"
+        },
+        {
+          "title": {
+            "ja": "NPC",
+            "en": "NPCs"
+          },
+          "url": "/database/npcs.html"
+        },
+        {
+          "title": {
+            "ja": "敵",
+            "en": "Enemies"
+          },
+          "url": "/database/enemies.html"
+        },
+        {
+          "title": {
+            "ja": "魔法",
+            "en": "Spells"
+          },
+          "url": "/database/spells.html"
+        }
+      ]
+    },
+    {
+      "title": {
+        "ja": "ガイド",
+        "en": "Guides"
+      },
+      "url": "/guides/"
+    }
+  ]
+}

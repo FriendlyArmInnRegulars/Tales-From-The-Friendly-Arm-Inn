@@ -1,0 +1,34 @@
+[
+  {
+    "id": "example_boss",
+    "name": {
+      "ja": "例：サレヴォク",
+      "en": "Example: Sarevok"
+    },
+    "type": "boss",
+    "hp": 185,
+    "ac": -10,
+    "thac0": 2,
+    "xp": 16000,
+    "resistances": {
+      "physical": 0,
+      "fire": 50,
+      "cold": 0,
+      "electricity": 0,
+      "magic": 50
+    },
+    "vulnerabilities": {
+      "ja": ["魔法攻撃", "遠距離攻撃"],
+      "en": ["Magic attacks", "Ranged attacks"]
+    },
+    "strategy": {
+      "ja": "高い魔法耐性を持つため、物理攻撃と強力な魔法の組み合わせが有効。召喚クリーチャーで注意を引きながら遠距離攻撃を使用する。",
+      "en": "High magic resistance requires combination of physical and powerful magic. Use summoned creatures as distraction while using ranged attacks."
+    },
+    "location": {
+      "ja": "EET: アンダーセルズ",
+      "en": "EET: Undercity"
+    },
+    "image": "/assets/images/enemies/sarevok.png"
+  }
+]

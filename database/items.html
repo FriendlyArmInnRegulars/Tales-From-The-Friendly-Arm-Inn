@@ -1,0 +1,29 @@
+---
+layout: database
+title: アイテムデータベース
+description: EET、IWD1-EET、IWD2-EETで入手可能な全アイテムの詳細情報
+lang: ja
+filters:
+  - label: すべて
+    value: all
+  - label: ポーション
+    value: potion
+  - label: 巻物
+    value: scroll
+  - label: 宝石
+    value: gem
+  - label: クエストアイテム
+    value: quest_item
+---
+
+<div class="database-grid">
+  {% for item in site.data.items %}
+    {% include item-card.html item=item %}
+  {% endfor %}
+</div>
+
+{% if site.data.items.size == 0 %}
+<div class="empty-state">
+  <p>現在、アイテムデータは登録されていません。今後追加予定です。</p>
+</div>
+{% endif %}

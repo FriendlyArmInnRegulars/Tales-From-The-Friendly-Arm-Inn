@@ -1,0 +1,153 @@
+---
+layout: default
+title: クエストガイド
+lang: ja
+---
+
+<div class="quests-index">
+  <h1>クエストガイド</h1>
+  <p class="intro">EET、IWD1-EET、IWD2-EETのすべてのクエストを詳細に解説します。</p>
+
+  <div class="quest-categories">
+    <section class="quest-section">
+      <h2>⚔️ EET クエスト</h2>
+      <p>Baldur's Gate Enhanced Edition Trilogyのクエスト</p>
+      <div class="quest-subsections">
+        <a href="{{ '/quests/eet/main/' | relative_url }}" class="subsection-link">メインクエスト</a>
+        <a href="{{ '/quests/eet/side/' | relative_url }}" class="subsection-link">サイドクエスト</a>
+      </div>
+    </section>
+
+    <section class="quest-section">
+      <h2>❄️ IWD1-EET クエスト</h2>
+      <p>Icewind Dale 1のクエスト（EET統合版）</p>
+      <div class="quest-subsections">
+        <a href="{{ '/quests/iwd1-eet/chapter1/' | relative_url }}" class="subsection-link">チャプター1</a>
+        <a href="{{ '/quests/iwd1-eet/chapter2/' | relative_url }}" class="subsection-link">チャプター2</a>
+        <a href="{{ '/quests/iwd1-eet/chapter3/' | relative_url }}" class="subsection-link">チャプター3</a>
+      </div>
+    </section>
+
+    <section class="quest-section">
+      <h2>🏔️ IWD2-EET クエスト</h2>
+      <p>Icewind Dale 2のクエスト（EET統合版）</p>
+      <div class="quest-subsections">
+        <a href="{{ '/quests/iwd2-eet/chapter1/' | relative_url }}" class="subsection-link">チャプター1</a>
+        <a href="{{ '/quests/iwd2-eet/chapter2/' | relative_url }}" class="subsection-link">チャプター2</a>
+        <a href="{{ '/quests/iwd2-eet/chapter3/' | relative_url }}" class="subsection-link">チャプター3</a>
+      </div>
+    </section>
+  </div>
+
+  <section class="example-quests">
+    <h2>クエスト例</h2>
+    <div class="quest-list">
+      {% for quest in site.quests %}
+      <div class="quest-item">
+        <h3><a href="{{ quest.url | relative_url }}">{{ quest.title }}</a></h3>
+        <div class="quest-meta">
+          <span class="quest-mod">{{ quest.mod }}</span>
+          <span class="quest-type">{{ quest.type }}</span>
+          {% if quest.level %}
+          <span class="quest-level">レベル {{ quest.level }}</span>
+          {% endif %}
+        </div>
+      </div>
+      {% endfor %}
+    </div>
+  </section>
+</div>
+
+<style>
+.quests-index h1 {
+  color: var(--primary-color);
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+.intro {
+  text-align: center;
+  font-size: 1.1rem;
+  margin-bottom: 3rem;
+  color: #666;
+}
+
+.quest-categories {
+  display: grid;
+  gap: 2rem;
+  margin-bottom: 3rem;
+}
+
+.quest-section {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+  border: 2px solid var(--border-color);
+}
+
+.quest-section h2 {
+  color: var(--primary-color);
+  margin-bottom: 1rem;
+}
+
+.quest-subsections {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-top: 1rem;
+}
+
+.subsection-link {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background-color: var(--primary-color);
+  color: white;
+  border-radius: 4px;
+  transition: background-color 0.3s;
+}
+
+.subsection-link:hover {
+  background-color: var(--secondary-color);
+  color: var(--text-color);
+}
+
+.example-quests {
+  background: var(--card-bg);
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: var(--shadow);
+}
+
+.example-quests h2 {
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+}
+
+.quest-list {
+  display: grid;
+  gap: 1rem;
+}
+
+.quest-item {
+  padding: 1rem;
+  border-left: 4px solid var(--secondary-color);
+  background-color: var(--background-color);
+  border-radius: 4px;
+}
+
+.quest-item h3 {
+  margin-bottom: 0.5rem;
+}
+
+.quest-item h3 a {
+  color: var(--primary-color);
+}
+
+.quest-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+}
+</style>

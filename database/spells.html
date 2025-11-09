@@ -1,0 +1,99 @@
+---
+layout: database
+title: 魔法データベース
+description: EET、IWD1-EET、IWD2-EETで使用可能な全魔法の詳細情報
+lang: ja
+filters:
+  - label: すべて
+    value: all
+  - label: 魔術師呪文
+    value: wizard
+  - label: 僧侶呪文
+    value: cleric
+  - label: ドルイド呪文
+    value: druid
+---
+
+<div class="spell-list">
+  {% for spell in site.data.spells %}
+  <div class="spell-card database-item" data-type="{{ spell.type }}">
+    {% if spell.image %}
+    <div class="spell-image">
+      <img src="{{ spell.image | relative_url }}" alt="{{ spell.name[page.lang] | default: spell.name.ja }}">
+    </div>
+    {% endif %}
+
+    <div class="spell-info">
+      <h3 class="spell-name">{{ spell.name[page.lang] | default: spell.name.ja }}</h3>
+
+      <div class="spell-meta">
+        <span class="spell-level">レベル {{ spell.level }}</span>
+        <span class="spell-school">{{ spell.school }}</span>
+        <span class="spell-type">{{ spell.type }}</span>
+      </div>
+
+      {% if spell.description %}
+      <p class="spell-description">{{ spell.description[page.lang] | default: spell.description.ja }}</p>
+      {% endif %}
+
+      <div class="spell-details">
+        {% if spell.casting_time %}<p><strong>詠唱時間:</strong> {{ spell.casting_time }}</p>{% endif %}
+        {% if spell.range %}<p><strong>射程:</strong> {{ spell.range }}</p>{% endif %}
+        {% if spell.duration %}<p><strong>持続時間:</strong> {{ spell.duration }}</p>{% endif %}
+        {% if spell.damage %}<p><strong>ダメージ:</strong> {{ spell.damage }}</p>{% endif %}
+        {% if spell.area %}<p><strong>効果範囲:</strong> {{ spell.area }}</p>{% endif %}
+        {% if spell.saving_throw %}<p><strong>セーヴィング・スロー:</strong> {{ spell.saving_throw }}</p>{% endif %}
+      </div>
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% if site.data.spells.size == 0 %}
+<div class="empty-state">
+  <p>現在、魔法データは登録されていません。今後追加予定です。</p>
+</div>
+{% endif %}
+
+<style>
+.spell-card {
+  margin-bottom: 2rem;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.spell-image {
+  flex-shrink: 0;
+}
+
+.spell-image img {
+  width: 100px;
+  height: 100px;
+  object-fit: contain;
+}
+
+.spell-meta {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 1rem;
+}
+
+.spell-level, .spell-school, .spell-type {
+  background-color: var(--secondary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.spell-details {
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin-top: 1rem;
+}
+
+.spell-details p {
+  margin-bottom: 0.5rem;
+}
+</style>

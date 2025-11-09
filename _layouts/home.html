@@ -1,0 +1,40 @@
+---
+layout: default
+---
+
+<div class="home-container">
+  <section class="hero">
+    <h1 class="hero-title">{{ page.title }}</h1>
+    <p class="hero-description">{{ page.description }}</p>
+  </section>
+
+  <section class="features">
+    <div class="feature-grid">
+      <div class="feature-card">
+        <h2>{% if page.lang == 'en' %}Quest Guides{% else %}クエストガイド{% endif %}</h2>
+        <p>{% if page.lang == 'en' %}Complete walkthroughs for all quests in EET, IWD1-EET, and IWD2-EET{% else %}EET、IWD1-EET、IWD2-EETの全クエストの詳細解説{% endif %}</p>
+        <a href="{{ '/quests/' | relative_url }}" class="btn">{% if page.lang == 'en' %}View Quests{% else %}クエストを見る{% endif %}</a>
+      </div>
+
+      <div class="feature-card">
+        <h2>{% if page.lang == 'en' %}Item Database{% else %}アイテムデータベース{% endif %}</h2>
+        <p>{% if page.lang == 'en' %}Comprehensive database of weapons, armor, and items{% else %}武器、防具、アイテムの包括的なデータベース{% endif %}</p>
+        <a href="{{ '/database/' | relative_url }}" class="btn">{% if page.lang == 'en' %}Browse Items{% else %}アイテムを見る{% endif %}</a>
+      </div>
+
+      <div class="feature-card">
+        <h2>{% if page.lang == 'en' %}Characters & NPCs{% else %}キャラクター・NPC{% endif %}</h2>
+        <p>{% if page.lang == 'en' %}Information about companions and important NPCs{% else %}仲間NPCと重要キャラクターの情報{% endif %}</p>
+        <a href="{{ '/database/npcs.html' | relative_url }}" class="btn">{% if page.lang == 'en' %}View NPCs{% else %}NPCを見る{% endif %}</a>
+      </div>
+
+      <div class="feature-card">
+        <h2>{% if page.lang == 'en' %}Spells & Magic{% else %}魔法ガイド{% endif %}</h2>
+        <p>{% if page.lang == 'en' %}Complete spell list with details and strategies{% else %}すべての魔法の詳細と使用戦略{% endif %}</p>
+        <a href="{{ '/database/spells.html' | relative_url }}" class="btn">{% if page.lang == 'en' %}View Spells{% else %}魔法を見る{% endif %}</a>
+      </div>
+    </div>
+  </section>
+
+  {{ content }}
+</div>

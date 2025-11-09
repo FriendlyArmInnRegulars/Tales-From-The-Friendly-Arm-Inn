@@ -1,0 +1,32 @@
+<footer class="site-footer">
+  <div class="footer-container">
+    <div class="footer-section">
+      <h3>{{ site.title }}</h3>
+      <p>{{ site.description }}</p>
+    </div>
+
+    <div class="footer-section">
+      <h4>{% if page.lang == 'en' %}Quick Links{% else %}クイックリンク{% endif %}</h4>
+      <ul>
+        <li><a href="{{ '/quests/' | relative_url }}">{% if page.lang == 'en' %}Quests{% else %}クエスト{% endif %}</a></li>
+        <li><a href="{{ '/database/' | relative_url }}">{% if page.lang == 'en' %}Database{% else %}データベース{% endif %}</a></li>
+        <li><a href="{{ '/guides/' | relative_url }}">{% if page.lang == 'en' %}Guides{% else %}ガイド{% endif %}</a></li>
+      </ul>
+    </div>
+
+    <div class="footer-section">
+      <h4>{% if page.lang == 'en' %}About{% else %}このサイトについて{% endif %}</h4>
+      <p>
+        {% if page.lang == 'en' %}
+        This is a fan-made guide for the EET mod series for Baldur's Gate. Not affiliated with Beamdog or Wizards of the Coast.
+        {% else %}
+        Baldur's Gate用EET Modシリーズの非公式ガイドです。BeamdogやWizards of the Coastとは関係ありません。
+        {% endif %}
+      </p>
+    </div>
+  </div>
+
+  <div class="footer-bottom">
+    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. {% if page.lang == 'en' %}All rights reserved.{% else %}All rights reserved.{% endif %}</p>
+  </div>
+</footer>

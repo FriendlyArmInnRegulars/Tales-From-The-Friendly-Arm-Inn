@@ -1,0 +1,116 @@
+---
+layout: database
+title: NPCデータベース
+description: EET、IWD1-EET、IWD2-EETの仲間NPCと重要キャラクター
+lang: ja
+---
+
+<div class="npc-list">
+  {% for npc in site.data.npcs %}
+  <div class="npc-card database-item">
+    {% if npc.image %}
+    <div class="npc-image">
+      <img src="{{ npc.image | relative_url }}" alt="{{ npc.name }}">
+    </div>
+    {% endif %}
+
+    <div class="npc-info">
+      <h3 class="npc-name">{{ npc.name }}</h3>
+
+      <div class="npc-basic-info">
+        <span class="npc-race">{{ npc.race }}</span>
+        <span class="npc-class">{{ npc.class }}</span>
+        <span class="npc-alignment">{{ npc.alignment }}</span>
+      </div>
+
+      {% if npc.description %}
+      <p class="npc-description">{{ npc.description[page.lang] | default: npc.description.ja }}</p>
+      {% endif %}
+
+      {% if npc.stats %}
+      <div class="npc-stats">
+        <h4>能力値</h4>
+        <div class="stats-grid">
+          <div><strong>STR:</strong> {{ npc.stats.str }}</div>
+          <div><strong>DEX:</strong> {{ npc.stats.dex }}</div>
+          <div><strong>CON:</strong> {{ npc.stats.con }}</div>
+          <div><strong>INT:</strong> {{ npc.stats.int }}</div>
+          <div><strong>WIS:</strong> {{ npc.stats.wis }}</div>
+          <div><strong>CHA:</strong> {{ npc.stats.cha }}</div>
+        </div>
+      </div>
+      {% endif %}
+
+      {% if npc.location %}
+      <p class="npc-location">
+        <strong>場所:</strong> {{ npc.location[page.lang] | default: npc.location.ja }}
+      </p>
+      {% endif %}
+
+      {% if npc.recruitment %}
+      <p class="npc-recruitment">
+        <strong>仲間にする方法:</strong> {{ npc.recruitment[page.lang] | default: npc.recruitment.ja }}
+      </p>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</div>
+
+{% if site.data.npcs.size == 0 %}
+<div class="empty-state">
+  <p>現在、NPCデータは登録されていません。今後追加予定です。</p>
+</div>
+{% endif %}
+
+<style>
+.npc-card {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.npc-image {
+  flex-shrink: 0;
+}
+
+.npc-image img {
+  width: 150px;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 50%;
+}
+
+.npc-basic-info {
+  display: flex;
+  gap: 0.5rem;
+  flex-wrap: wrap;
+  margin: 0.5rem 0 1rem;
+}
+
+.npc-race, .npc-class, .npc-alignment {
+  background-color: var(--secondary-color);
+  padding: 0.25rem 0.75rem;
+  border-radius: 4px;
+  font-size: 0.85rem;
+}
+
+.npc-stats {
+  background-color: var(--background-color);
+  padding: 1rem;
+  border-radius: 4px;
+  margin: 1rem 0;
+}
+
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 0.5rem;
+  margin-top: 0.5rem;
+}
+
+.npc-location, .npc-recruitment {
+  margin-top: 0.75rem;
+  font-size: 0.95rem;
+}
+</style>

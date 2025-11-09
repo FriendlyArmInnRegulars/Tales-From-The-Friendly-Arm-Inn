@@ -1,0 +1,24 @@
+[
+  {
+    "id": "example_spell",
+    "name": {
+      "ja": "例：ファイアーボール",
+      "en": "Example: Fireball"
+    },
+    "school": "evocation",
+    "level": 3,
+    "type": "wizard",
+    "casting_time": 3,
+    "range": "100 feet",
+    "duration": "Instant",
+    "saving_throw": "Reflex half",
+    "damage": "1d6/level (max 10d6)",
+    "area": "20-foot radius",
+    "description": {
+      "ja": "指定した地点で爆発し、範囲内の全ての敵に炎ダメージを与える。セーヴィングスローに成功すればダメージ半減。",
+      "en": "Creates an explosion at target location, dealing fire damage to all enemies in area. Successful saving throw halves damage."
+    },
+    "components": ["verbal", "somatic"],
+    "image": "/assets/images/spells/fireball.png"
+  }
+]

@@ -1,0 +1,23 @@
+[
+  {
+    "id": "example_plate",
+    "name": {
+      "ja": "例：フル プレート メイル+1",
+      "en": "Example: Full Plate Mail +1"
+    },
+    "type": "heavy_armor",
+    "ac": 0,
+    "enchantment": 1,
+    "weight": 50,
+    "special": {
+      "ja": "なし",
+      "en": "None"
+    },
+    "location": {
+      "ja": "EET: 商人から購入",
+      "en": "EET: Purchase from merchant"
+    },
+    "usable_by": ["fighter", "paladin", "ranger"],
+    "image": "/assets/images/items/full_plate.png"
+  }
+]

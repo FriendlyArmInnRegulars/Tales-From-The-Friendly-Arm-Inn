@@ -1,0 +1,49 @@
+---
+layout: default
+---
+
+<article class="quest">
+  <header class="quest-header">
+    <h1 class="quest-title">{{ page.title }}</h1>
+
+    <div class="quest-meta">
+      {% if page.mod %}
+      <span class="quest-mod">{{ page.mod }}</span>
+      {% endif %}
+
+      {% if page.type %}
+      <span class="quest-type">{{ page.type }}</span>
+      {% endif %}
+
+      {% if page.level %}
+      <span class="quest-level">{% if page.lang == 'en' %}Level{% else %}推奨レベル{% endif %}: {{ page.level }}</span>
+      {% endif %}
+    </div>
+
+    {% if page.rewards %}
+    <div class="quest-rewards">
+      <h3>{% if page.lang == 'en' %}Rewards{% else %}報酬{% endif %}</h3>
+      <ul>
+        {% for reward in page.rewards %}
+        <li>{{ reward }}</li>
+        {% endfor %}
+      </ul>
+    </div>
+    {% endif %}
+  </header>
+
+  <div class="quest-content">
+    {{ content }}
+  </div>
+
+  {% if page.related_quests %}
+  <aside class="related-quests">
+    <h3>{% if page.lang == 'en' %}Related Quests{% else %}関連クエスト{% endif %}</h3>
+    <ul>
+      {% for quest in page.related_quests %}
+      <li><a href="{{ quest.url | relative_url }}">{{ quest.title }}</a></li>
+      {% endfor %}
+    </ul>
+  </aside>
+  {% endif %}
+</article>

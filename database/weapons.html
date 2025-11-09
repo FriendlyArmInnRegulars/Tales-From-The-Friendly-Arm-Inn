@@ -1,0 +1,29 @@
+---
+layout: database
+title: 武器データベース
+description: EET、IWD1-EET、IWD2-EETで入手可能な全武器の詳細情報
+lang: ja
+filters:
+  - label: すべて
+    value: all
+  - label: 長剣
+    value: longsword
+  - label: 両手剣
+    value: greatsword
+  - label: 弓
+    value: bow
+  - label: メイス
+    value: mace
+---
+
+<div class="database-grid">
+  {% for weapon in site.data.weapons %}
+    {% include item-card.html item=weapon %}
+  {% endfor %}
+</div>
+
+{% if site.data.weapons.size == 0 %}
+<div class="empty-state">
+  <p>現在、武器データは登録されていません。今後追加予定です。</p>
+</div>
+{% endif %}
