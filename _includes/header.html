@@ -1,45 +1,47 @@
-<header class="site-header">
-  <div class="header-container">
-    <div class="site-logo">
-      <a href="{{ '/' | relative_url }}">
-        <h1>{{ site.title }}</h1>
-      </a>
-    </div>
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top shadow">
+  <div class="container-fluid">
+    <a class="navbar-brand fw-bold" href="{{ '/' | relative_url }}">
+      <i class="bi bi-book-half me-2"></i>{{ site.title }}
+    </a>
 
-    <nav class="site-nav">
-      <button class="nav-toggle" aria-label="Toggle navigation">
-        <span></span>
-        <span></span>
-        <span></span>
-      </button>
+    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <ul class="nav-menu">
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav me-auto mb-2 mb-lg-0">
         {% for item in site.data.navigation.main %}
-        <li class="nav-item {% if item.submenu %}has-submenu{% endif %}">
-          <a href="{{ item.url | relative_url }}">
+        {% if item.submenu %}
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
             {{ item.title[page.lang] | default: item.title.ja }}
           </a>
-
-          {% if item.submenu %}
-          <ul class="submenu">
+          <ul class="dropdown-menu">
             {% for subitem in item.submenu %}
             <li>
-              <a href="{{ subitem.url | relative_url }}">
+              <a class="dropdown-item" href="{{ subitem.url | relative_url }}">
                 {{ subitem.title[page.lang] | default: subitem.title.ja }}
               </a>
             </li>
             {% endfor %}
           </ul>
-          {% endif %}
         </li>
+        {% else %}
+        <li class="nav-item">
+          <a class="nav-link" href="{{ item.url | relative_url }}">
+            {{ item.title[page.lang] | default: item.title.ja }}
+          </a>
+        </li>
+        {% endif %}
         {% endfor %}
       </ul>
-    </nav>
 
-    <div class="language-switcher">
-      <a href="{{ page.url | remove: '/en' | relative_url }}" class="lang-link {% if page.lang == 'ja' %}active{% endif %}">日本語</a>
-      <span class="lang-separator">/</span>
-      <a href="{{ '/en' | append: page.url | relative_url }}" class="lang-link {% if page.lang == 'en' %}active{% endif %}">English</a>
+      <div class="d-flex">
+        <div class="btn-group" role="group" aria-label="Language switcher">
+          <a href="{{ page.url | remove: '/en' | relative_url }}" class="btn btn-sm {% if page.lang == 'ja' %}btn-primary{% else %}btn-outline-primary{% endif %}">日本語</a>
+          <a href="{{ '/en' | append: page.url | relative_url }}" class="btn btn-sm {% if page.lang == 'en' %}btn-primary{% else %}btn-outline-primary{% endif %}">English</a>
+        </div>
+      </div>
     </div>
   </div>
-</header>
+</nav>

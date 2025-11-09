@@ -1,32 +1,43 @@
-<footer class="site-footer">
-  <div class="footer-container">
-    <div class="footer-section">
-      <h3>{{ site.title }}</h3>
-      <p>{{ site.description }}</p>
+<footer class="bg-dark text-light py-5 mt-5">
+  <div class="container">
+    <div class="row g-4">
+      <div class="col-lg-4 col-md-6">
+        <h5 class="fw-bold mb-3"><i class="bi bi-book-half me-2"></i>{{ site.title }}</h5>
+        <p class="text-muted">{{ site.description }}</p>
+      </div>
+
+      <div class="col-lg-4 col-md-6">
+        <h6 class="fw-bold mb-3">{% if page.lang == 'en' %}Quick Links{% else %}クイックリンク{% endif %}</h6>
+        <ul class="list-unstyled">
+          <li class="mb-2"><a href="{{ '/quests/' | relative_url }}" class="text-decoration-none text-light"><i class="bi bi-arrow-right-short"></i>{% if page.lang == 'en' %}Quests{% else %}クエスト{% endif %}</a></li>
+          <li class="mb-2"><a href="{{ '/database/' | relative_url }}" class="text-decoration-none text-light"><i class="bi bi-arrow-right-short"></i>{% if page.lang == 'en' %}Database{% else %}データベース{% endif %}</a></li>
+          <li class="mb-2"><a href="{{ '/guides/' | relative_url }}" class="text-decoration-none text-light"><i class="bi bi-arrow-right-short"></i>{% if page.lang == 'en' %}Guides{% else %}ガイド{% endif %}</a></li>
+        </ul>
+      </div>
+
+      <div class="col-lg-4 col-md-12">
+        <h6 class="fw-bold mb-3">{% if page.lang == 'en' %}About{% else %}このサイトについて{% endif %}</h6>
+        <p class="text-muted small">
+          {% if page.lang == 'en' %}
+          This is a fan-made guide for the EET mod series for Baldur's Gate. Not affiliated with Beamdog or Wizards of the Coast.
+          {% else %}
+          Baldur's Gate用EET Modシリーズの非公式ガイドです。BeamdogやWizards of the Coastとは関係ありません。
+          {% endif %}
+        </p>
+      </div>
     </div>
 
-    <div class="footer-section">
-      <h4>{% if page.lang == 'en' %}Quick Links{% else %}クイックリンク{% endif %}</h4>
-      <ul>
-        <li><a href="{{ '/quests/' | relative_url }}">{% if page.lang == 'en' %}Quests{% else %}クエスト{% endif %}</a></li>
-        <li><a href="{{ '/database/' | relative_url }}">{% if page.lang == 'en' %}Database{% else %}データベース{% endif %}</a></li>
-        <li><a href="{{ '/guides/' | relative_url }}">{% if page.lang == 'en' %}Guides{% else %}ガイド{% endif %}</a></li>
-      </ul>
-    </div>
+    <hr class="my-4 border-secondary">
 
-    <div class="footer-section">
-      <h4>{% if page.lang == 'en' %}About{% else %}このサイトについて{% endif %}</h4>
-      <p>
-        {% if page.lang == 'en' %}
-        This is a fan-made guide for the EET mod series for Baldur's Gate. Not affiliated with Beamdog or Wizards of the Coast.
-        {% else %}
-        Baldur's Gate用EET Modシリーズの非公式ガイドです。BeamdogやWizards of the Coastとは関係ありません。
-        {% endif %}
-      </p>
+    <div class="row">
+      <div class="col-md-6 text-center text-md-start">
+        <p class="mb-0 text-muted small">&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. All rights reserved.</p>
+      </div>
+      <div class="col-md-6 text-center text-md-end">
+        <a href="https://github.com/FriendlyArmInnRegulars/Tales-From-The-Friendly-Arm-Inn" class="text-light text-decoration-none me-3" target="_blank">
+          <i class="bi bi-github"></i> GitHub
+        </a>
+      </div>
     </div>
-  </div>
-
-  <div class="footer-bottom">
-    <p>&copy; {{ 'now' | date: "%Y" }} {{ site.title }}. {% if page.lang == 'en' %}All rights reserved.{% else %}All rights reserved.{% endif %}</p>
   </div>
 </footer>

@@ -1,26 +1,173 @@
 ---
-layout: home
+layout: default
 title: Tales From The Friendly Arm Inn
 description: EET、IWD1-EET、IWD2-EET Modの完全攻略ガイド
 lang: ja
 ---
 
-<section class="about">
-  <h2>このサイトについて</h2>
-  <p>
-    「Tales From The Friendly Arm Inn」は、Baldur's Gate用のEET（Enhanced Edition Trilogy）Modおよび
-    その拡張Mod IWD1-EET、IWD2-EETのための包括的なガイドサイトです。
-  </p>
-  <p>
-    すべてのクエストの詳細な解説、武器・防具・アイテムのデータベース、NPC情報、敵の攻略法、
-    魔法ガイドなど、冒険に必要なすべての情報を提供します。
-  </p>
-</section>
+<!-- Hero Section -->
+<div class="bg-dark text-light py-5 mb-5">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-lg-8 mx-auto text-center">
+        <h1 class="display-4 fw-bold mb-4">
+          <i class="bi bi-book-half me-3"></i>Tales From The Friendly Arm Inn
+        </h1>
+        <p class="lead mb-4">
+          EET（Enhanced Edition Trilogy）、IWD1-EET、IWD2-EETの完全攻略ガイド
+        </p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center">
+          <a href="{{ '/guides/' | relative_url }}" class="btn btn-primary btn-lg px-4 gap-3">
+            <i class="bi bi-compass me-2"></i>ガイドを読む
+          </a>
+          <a href="{{ '/database/' | relative_url }}" class="btn btn-outline-light btn-lg px-4">
+            <i class="bi bi-database me-2"></i>データベース
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
 
-<section class="latest-updates">
-  <h2>最新の更新</h2>
-  <ul>
-    <li>サイトを立ち上げました（2025-11-09）</li>
-    <li>基本的なデータベース構造を構築しました</li>
-  </ul>
-</section>
+<!-- About Section -->
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="card shadow-sm">
+        <div class="card-body p-4">
+          <h2 class="card-title h3 mb-4"><i class="bi bi-info-circle me-2"></i>このサイトについて</h2>
+          <p class="card-text">
+            「Tales From The Friendly Arm Inn」は、Baldur's Gate用のEET（Enhanced Edition Trilogy）Modおよび
+            その拡張Mod IWD1-EET、IWD2-EETのための包括的なガイドサイトです。
+          </p>
+          <p class="card-text">
+            すべてのクエストの詳細な解説、武器・防具・アイテムのデータベース、NPC情報、敵の攻略法、
+            魔法ガイドなど、冒険に必要なすべての情報を提供します。
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Features Section -->
+<div class="container mb-5">
+  <h2 class="text-center mb-4">主要コンテンツ</h2>
+  <div class="row g-4">
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <i class="bi bi-map fs-1 text-primary mb-3"></i>
+          <h5 class="card-title">クエストガイド</h5>
+          <p class="card-text">すべてのクエストの詳細な攻略情報</p>
+          <a href="{{ '/quests/' | relative_url }}" class="btn btn-sm btn-outline-primary">詳しく見る</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <i class="bi bi-shield fs-1 text-success mb-3"></i>
+          <h5 class="card-title">武器・防具</h5>
+          <p class="card-text">全装備のデータベースと入手場所</p>
+          <a href="{{ '/database/weapons/' | relative_url }}" class="btn btn-sm btn-outline-success">詳しく見る</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <i class="bi bi-people fs-1 text-info mb-3"></i>
+          <h5 class="card-title">NPCガイド</h5>
+          <p class="card-text">仲間キャラクターの詳細情報</p>
+          <a href="{{ '/database/npcs/' | relative_url }}" class="btn btn-sm btn-outline-info">詳しく見る</a>
+        </div>
+      </div>
+    </div>
+    <div class="col-md-6 col-lg-3">
+      <div class="card h-100 shadow-sm">
+        <div class="card-body text-center">
+          <i class="bi bi-star fs-1 text-warning mb-3"></i>
+          <h5 class="card-title">魔法・スペル</h5>
+          <p class="card-text">全呪文の効果と使用方法</p>
+          <a href="{{ '/database/spells/' | relative_url }}" class="btn btn-sm btn-outline-warning">詳しく見る</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Latest Updates -->
+<div class="container mb-5">
+  <div class="row">
+    <div class="col-lg-8 mx-auto">
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h3 class="h5 mb-0"><i class="bi bi-clock-history me-2"></i>最新の更新</h3>
+        </div>
+        <div class="card-body">
+          <ul class="list-group list-group-flush">
+            <li class="list-group-item">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              クラス・種族ガイドを追加しました（2025-11-09）
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              ゲームメカニクスガイドを追加しました（2025-11-09）
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              BG1、BG2、IWDロケーションガイドを追加しました（2025-11-09）
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              基本的なデータベース構造を構築しました（2025-11-09）
+            </li>
+            <li class="list-group-item">
+              <i class="bi bi-check-circle-fill text-success me-2"></i>
+              サイトを立ち上げました（2025-11-09）
+            </li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Quick Links -->
+<div class="container mb-5">
+  <h2 class="text-center mb-4">クイックリンク</h2>
+  <div class="row g-3">
+    <div class="col-md-4">
+      <div class="list-group">
+        <div class="list-group-item list-group-item-action active">
+          <i class="bi bi-book me-2"></i>ガイド
+        </div>
+        <a href="{{ '/guides/classes/' | relative_url }}" class="list-group-item list-group-item-action">クラスガイド</a>
+        <a href="{{ '/guides/races/' | relative_url }}" class="list-group-item list-group-item-action">種族ガイド</a>
+        <a href="{{ '/guides/mechanics/' | relative_url }}" class="list-group-item list-group-item-action">ゲームメカニクス</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="list-group">
+        <div class="list-group-item list-group-item-action active">
+          <i class="bi bi-geo-alt me-2"></i>ロケーション
+        </div>
+        <a href="{{ '/guides/locations-bg1/' | relative_url }}" class="list-group-item list-group-item-action">BG1ロケーション</a>
+        <a href="{{ '/guides/locations-bg2/' | relative_url }}" class="list-group-item list-group-item-action">BG2ロケーション</a>
+        <a href="{{ '/guides/locations-iwd/' | relative_url }}" class="list-group-item list-group-item-action">IWDロケーション</a>
+      </div>
+    </div>
+    <div class="col-md-4">
+      <div class="list-group">
+        <div class="list-group-item list-group-item-action active">
+          <i class="bi bi-database me-2"></i>データベース
+        </div>
+        <a href="{{ '/database/weapons/' | relative_url }}" class="list-group-item list-group-item-action">武器</a>
+        <a href="{{ '/database/armor/' | relative_url }}" class="list-group-item list-group-item-action">防具</a>
+        <a href="{{ '/database/items/' | relative_url }}" class="list-group-item list-group-item-action">アイテム</a>
+        <a href="{{ '/database/enemies/' | relative_url }}" class="list-group-item list-group-item-action">敵・ボス</a>
+      </div>
+    </div>
+  </div>
+</div>

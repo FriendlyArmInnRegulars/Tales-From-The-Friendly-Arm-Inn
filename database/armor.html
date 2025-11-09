@@ -1,29 +1,131 @@
 ---
-layout: database
+layout: default
 title: 防具データベース
 description: EET、IWD1-EET、IWD2-EETで入手可能な全防具の詳細情報
 lang: ja
-filters:
-  - label: すべて
-    value: all
-  - label: 重装鎧
-    value: heavy_armor
-  - label: 中装鎧
-    value: medium_armor
-  - label: 軽装鎧
-    value: light_armor
-  - label: ローブ
-    value: robe
 ---
 
-<div class="database-grid">
-  {% for armor in site.data.armor %}
-    {% include item-card.html item=armor %}
-  {% endfor %}
+<div class="container my-5">
+  <!-- Page Header -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <h1 class="display-5 fw-bold"><i class="bi bi-shield me-2"></i>防具データベース</h1>
+      <p class="lead text-muted">EETで入手可能な全防具の詳細情報</p>
+    </div>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="btn-group flex-wrap" role="group" aria-label="Armor type filter">
+        <button type="button" class="btn btn-outline-success active" data-filter="all">すべて</button>
+        <button type="button" class="btn btn-outline-success" data-filter="plate">プレートメイル</button>
+        <button type="button" class="btn btn-outline-success" data-filter="chainmail">チェインメイル</button>
+        <button type="button" class="btn btn-outline-success" data-filter="leather">レザーアーマー</button>
+        <button type="button" class="btn btn-outline-success" data-filter="robe">ローブ</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Box -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="text" class="form-control" id="armorSearch" placeholder="防具名で検索...">
+      </div>
+    </div>
+  </div>
+
+  <!-- Armor Grid -->
+  <div class="row g-4" id="armorGrid">
+    {% for armor in site.data.armor %}
+    <div class="col-md-6 col-lg-4 armor-item" data-type="{{ armor.type }}">
+      <div class="card h-100 shadow-sm">
+        <div class="card-header bg-success text-white">
+          <h5 class="card-title mb-0">{{ armor.name.ja }}</h5>
+          <small class="text-white-50">{{ armor.name.en }}</small>
+        </div>
+        <div class="card-body">
+          <dl class="row mb-0">
+            <dt class="col-sm-4">種類</dt>
+            <dd class="col-sm-8">
+              {% case armor.type %}
+                {% when 'plate' %}プレートメイル
+                {% when 'chainmail' %}チェインメイル
+                {% when 'leather' %}レザーアーマー
+                {% when 'robe' %}ローブ
+                {% else %}{{ armor.type }}
+              {% endcase %}
+            </dd>
+
+            <dt class="col-sm-4">AC</dt>
+            <dd class="col-sm-8"><span class="badge bg-primary">{{ armor.ac }}</span></dd>
+
+            {% if armor.weight %}
+            <dt class="col-sm-4">重量</dt>
+            <dd class="col-sm-8">{{ armor.weight }}</dd>
+            {% endif %}
+
+            {% if armor.special %}
+            <dt class="col-sm-4">特殊効果</dt>
+            <dd class="col-sm-8"><small class="text-muted">{{ armor.special.ja }}</small></dd>
+            {% endif %}
+
+            <dt class="col-sm-4">入手場所</dt>
+            <dd class="col-sm-8"><small class="text-info">{{ armor.location.ja }}</small></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if site.data.armor.size == 0 %}
+  <div class="alert alert-warning text-center mt-5" role="alert">
+    <i class="bi bi-exclamation-triangle me-2"></i>
+    現在、防具データは登録されていません。今後追加予定です。
+  </div>
+  {% endif %}
 </div>
 
-{% if site.data.armor.size == 0 %}
-<div class="empty-state">
-  <p>現在、防具データは登録されていません。今後追加予定です。</p>
-</div>
-{% endif %}
+<script>
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('[data-filter]');
+  const armorItems = document.querySelectorAll('.armor-item');
+  const searchInput = document.getElementById('armorSearch');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+
+      armorItems.forEach(item => {
+        if (filter === 'all' || item.getAttribute('data-type') === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+
+      armorItems.forEach(item => {
+        const armorName = item.textContent.toLowerCase();
+        if (armorName.includes(searchTerm)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  }
+});
+</script>

@@ -1,29 +1,136 @@
 ---
-layout: database
+layout: default
 title: 武器データベース
 description: EET、IWD1-EET、IWD2-EETで入手可能な全武器の詳細情報
 lang: ja
-filters:
-  - label: すべて
-    value: all
-  - label: 長剣
-    value: longsword
-  - label: 両手剣
-    value: greatsword
-  - label: 弓
-    value: bow
-  - label: メイス
-    value: mace
 ---
 
-<div class="database-grid">
-  {% for weapon in site.data.weapons %}
-    {% include item-card.html item=weapon %}
-  {% endfor %}
+<div class="container my-5">
+  <!-- Page Header -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <h1 class="display-5 fw-bold"><i class="bi bi-sword me-2"></i>武器データベース</h1>
+      <p class="lead text-muted">EETで入手可能な全武器の詳細情報</p>
+    </div>
+  </div>
+
+  <!-- Filter Buttons -->
+  <div class="row mb-4">
+    <div class="col-12">
+      <div class="btn-group flex-wrap" role="group" aria-label="Weapon type filter">
+        <button type="button" class="btn btn-outline-primary active" data-filter="all">すべて</button>
+        <button type="button" class="btn btn-outline-primary" data-filter="longsword">長剣</button>
+        <button type="button" class="btn btn-outline-primary" data-filter="greatsword">両手剣</button>
+        <button type="button" class="btn btn-outline-primary" data-filter="bow">弓</button>
+        <button type="button" class="btn btn-outline-primary" data-filter="mace">メイス</button>
+        <button type="button" class="btn btn-outline-primary" data-filter="katana">カタナ</button>
+        <button type="button" class="btn btn-outline-primary" data-filter="flail">フレイル</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Search Box -->
+  <div class="row mb-4">
+    <div class="col-md-6">
+      <div class="input-group">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+        <input type="text" class="form-control" id="weaponSearch" placeholder="武器名で検索...">
+      </div>
+    </div>
+  </div>
+
+  <!-- Weapons Grid -->
+  <div class="row g-4" id="weaponsGrid">
+    {% for weapon in site.data.weapons %}
+    <div class="col-md-6 col-lg-4 weapon-item" data-type="{{ weapon.type }}">
+      <div class="card h-100 shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h5 class="card-title mb-0">{{ weapon.name.ja }}</h5>
+          <small class="text-white-50">{{ weapon.name.en }}</small>
+        </div>
+        <div class="card-body">
+          <dl class="row mb-0">
+            <dt class="col-sm-4">種類</dt>
+            <dd class="col-sm-8">
+              {% case weapon.type %}
+                {% when 'longsword' %}長剣
+                {% when 'greatsword' %}両手剣
+                {% when 'bow' %}弓
+                {% when 'mace' %}メイス
+                {% when 'katana' %}カタナ
+                {% when 'flail' %}フレイル
+                {% else %}{{ weapon.type }}
+              {% endcase %}
+            </dd>
+
+            <dt class="col-sm-4">エンチャント</dt>
+            <dd class="col-sm-8"><span class="badge bg-success">+{{ weapon.enchantment }}</span></dd>
+
+            <dt class="col-sm-4">ダメージ</dt>
+            <dd class="col-sm-8"><strong>{{ weapon.damage }}</strong></dd>
+
+            <dt class="col-sm-4">THAC0</dt>
+            <dd class="col-sm-8">+{{ weapon.thac0 }}</dd>
+
+            {% if weapon.special %}
+            <dt class="col-sm-4">特殊効果</dt>
+            <dd class="col-sm-8"><small class="text-muted">{{ weapon.special.ja }}</small></dd>
+            {% endif %}
+
+            <dt class="col-sm-4">入手場所</dt>
+            <dd class="col-sm-8"><small class="text-info">{{ weapon.location.ja }}</small></dd>
+          </dl>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+
+  {% if site.data.weapons.size == 0 %}
+  <div class="alert alert-warning text-center mt-5" role="alert">
+    <i class="bi bi-exclamation-triangle me-2"></i>
+    現在、武器データは登録されていません。今後追加予定です。
+  </div>
+  {% endif %}
 </div>
 
-{% if site.data.weapons.size == 0 %}
-<div class="empty-state">
-  <p>現在、武器データは登録されていません。今後追加予定です。</p>
-</div>
-{% endif %}
+<script>
+// Filter functionality
+document.addEventListener('DOMContentLoaded', function() {
+  const filterButtons = document.querySelectorAll('[data-filter]');
+  const weaponItems = document.querySelectorAll('.weapon-item');
+  const searchInput = document.getElementById('weaponSearch');
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', function() {
+      const filter = this.getAttribute('data-filter');
+
+      filterButtons.forEach(btn => btn.classList.remove('active'));
+      this.classList.add('active');
+
+      weaponItems.forEach(item => {
+        if (filter === 'all' || item.getAttribute('data-type') === filter) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  });
+
+  if (searchInput) {
+    searchInput.addEventListener('input', function() {
+      const searchTerm = this.value.toLowerCase();
+
+      weaponItems.forEach(item => {
+        const weaponName = item.textContent.toLowerCase();
+        if (weaponName.includes(searchTerm)) {
+          item.style.display = '';
+        } else {
+          item.style.display = 'none';
+        }
+      });
+    });
+  }
+});
+</script>
