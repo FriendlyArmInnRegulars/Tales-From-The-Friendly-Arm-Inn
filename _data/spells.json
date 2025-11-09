@@ -1,9 +1,31 @@
 [
   {
-    "id": "example_spell",
+    "id": "magic_missile",
     "name": {
-      "ja": "例：ファイアーボール",
-      "en": "Example: Fireball"
+      "ja": "マジック・ミサイル",
+      "en": "Magic Missile"
+    },
+    "school": "evocation",
+    "level": 1,
+    "type": "wizard",
+    "casting_time": 1,
+    "range": "Visual range",
+    "duration": "Instant",
+    "saving_throw": "None",
+    "damage": "1d4+1 per missile",
+    "area": "Single target",
+    "description": {
+      "ja": "自動命中する魔法の矢を発射する。レベルに応じて矢の数が増加（2レベルで2本、3レベルで3本...最大5本）。",
+      "en": "Launches auto-hitting magical missiles. Number of missiles increases with level (2 at level 2, 3 at level 3... max 5)."
+    },
+    "components": ["verbal", "somatic"],
+    "image": "/assets/images/spells/magic_missile.png"
+  },
+  {
+    "id": "fireball",
+    "name": {
+      "ja": "ファイアーボール",
+      "en": "Fireball"
     },
     "school": "evocation",
     "level": 3,
@@ -20,5 +42,203 @@
     },
     "components": ["verbal", "somatic"],
     "image": "/assets/images/spells/fireball.png"
+  },
+  {
+    "id": "stoneskin",
+    "name": {
+      "ja": "ストーンスキン",
+      "en": "Stoneskin"
+    },
+    "school": "abjuration",
+    "level": 4,
+    "type": "wizard",
+    "casting_time": 1,
+    "range": "Self",
+    "duration": "8 hours",
+    "saving_throw": "None",
+    "damage": "N/A",
+    "area": "Caster",
+    "description": {
+      "ja": "術者の肌を石のように硬くし、一定回数の物理攻撃を無効化する。レベルごとに1回の攻撃を防ぐ（最大10回）。",
+      "en": "Hardens caster's skin like stone, negating a number of physical attacks. Blocks 1 attack per level (max 10)."
+    },
+    "components": ["verbal", "somatic"],
+    "image": "/assets/images/spells/stoneskin.png"
+  },
+  {
+    "id": "haste",
+    "name": {
+      "ja": "ヘイスト",
+      "en": "Haste"
+    },
+    "school": "alteration",
+    "level": 3,
+    "type": "wizard",
+    "casting_time": 3,
+    "range": "Visual range",
+    "duration": "3 rounds",
+    "saving_throw": "None",
+    "damage": "N/A",
+    "area": "30-foot radius",
+    "description": {
+      "ja": "範囲内の味方の移動速度と攻撃速度を2倍にする。ただし持続時間終了後に疲労状態になる。",
+      "en": "Doubles movement and attack speed of allies in area. Causes fatigue when duration ends."
+    },
+    "components": ["verbal", "somatic"],
+    "image": "/assets/images/spells/haste.png"
+  },
+  {
+    "id": "timestop",
+    "name": {
+      "ja": "タイム・ストップ",
+      "en": "Time Stop"
+    },
+    "school": "alteration",
+    "level": 9,
+    "type": "wizard",
+    "casting_time": 9,
+    "range": "Self",
+    "duration": "15 seconds",
+    "saving_throw": "None",
+    "damage": "N/A",
+    "area": "Global",
+    "description": {
+      "ja": "術者以外の時間を停止させる。術者は自由に行動できるが、直接ダメージを与える呪文は使用できない。",
+      "en": "Stops time for everyone except the caster. Caster can act freely but cannot cast damage-dealing spells."
+    },
+    "components": ["verbal"],
+    "image": "/assets/images/spells/timestop.png"
+  },
+  {
+    "id": "cure_light_wounds",
+    "name": {
+      "ja": "キュア・ライト・ウーンズ",
+      "en": "Cure Light Wounds"
+    },
+    "school": "necromancy",
+    "level": 1,
+    "type": "cleric",
+    "casting_time": 5,
+    "range": "Touch",
+    "duration": "Instant",
+    "saving_throw": "None",
+    "damage": "Heals 1d8",
+    "area": "Single target",
+    "description": {
+      "ja": "対象のHPを1d8回復する。アンデッドには同量のダメージを与える。",
+      "en": "Heals 1d8 HP. Damages undead for the same amount."
+    },
+    "components": ["verbal", "somatic"],
+    "image": "/assets/images/spells/cure_light_wounds.png"
+  },
+  {
+    "id": "heal",
+    "name": {
+      "ja": "ヒール",
+      "en": "Heal"
+    },
+    "school": "necromancy",
+    "level": 6,
+    "type": "cleric",
+    "casting_time": 5,
+    "range": "Touch",
+    "duration": "Instant",
+    "saving_throw": "None",
+    "damage": "Full HP recovery",
+    "area": "Single target",
+    "description": {
+      "ja": "対象のHPを完全に回復し、病気、毒、盲目を治癒する。アンデッドには同様に大ダメージを与える。",
+      "en": "Fully restores target's HP and cures disease, poison, and blindness. Deals massive damage to undead."
+    },
+    "components": ["verbal", "somatic"],
+    "image": "/assets/images/spells/heal.png"
+  },
+  {
+    "id": "bless",
+    "name": {
+      "ja": "ブレス",
+      "en": "Bless"
+    },
+    "school": "conjuration",
+    "level": 1,
+    "type": "cleric",
+    "casting_time": 1,
+    "range": "Visual range",
+    "duration": "6 rounds",
+    "saving_throw": "None",
+    "damage": "N/A",
+    "area": "30-foot radius",
+    "description": {
+      "ja": "範囲内の味方に攻撃とダメージに+1のボーナスを与え、士気を向上させる。",
+      "en": "Grants +1 bonus to attack and damage rolls for allies in area and improves morale."
+    },
+    "components": ["verbal", "somatic", "material"],
+    "image": "/assets/images/spells/bless.png"
+  },
+  {
+    "id": "hold_person",
+    "name": {
+      "ja": "ホールド・パーソン",
+      "en": "Hold Person"
+    },
+    "school": "enchantment",
+    "level": 2,
+    "type": "cleric",
+    "casting_time": 5,
+    "range": "Visual range",
+    "duration": "10 rounds",
+    "saving_throw": "Spell negates",
+    "damage": "N/A",
+    "area": "1-4 targets",
+    "description": {
+      "ja": "対象の人型クリーチャーを麻痺させる。複数の敵を同時に麻痺させることができる強力な制御呪文。",
+      "en": "Paralyzes target humanoid creatures. Powerful crowd control spell that can affect multiple enemies."
+    },
+    "components": ["verbal", "somatic"],
+    "image": "/assets/images/spells/hold_person.png"
+  },
+  {
+    "id": "flame_strike",
+    "name": {
+      "ja": "フレイム・ストライク",
+      "en": "Flame Strike"
+    },
+    "school": "evocation",
+    "level": 5,
+    "type": "cleric",
+    "casting_time": 8,
+    "range": "Visual range",
+    "duration": "Instant",
+    "saving_throw": "Reflex half",
+    "damage": "6d8",
+    "area": "15-foot radius",
+    "description": {
+      "ja": "天から炎の柱を呼び出し、範囲内の敵に6d8の炎ダメージを与える。",
+      "en": "Calls down a pillar of flame from the heavens, dealing 6d8 fire damage to enemies in area."
+    },
+    "components": ["verbal", "somatic"],
+    "image": "/assets/images/spells/flame_strike.png"
+  },
+  {
+    "id": "animate_dead",
+    "name": {
+      "ja": "アニメイト・デッド",
+      "en": "Animate Dead"
+    },
+    "school": "necromancy",
+    "level": 3,
+    "type": "cleric",
+    "casting_time": 1,
+    "range": "Visual range",
+    "duration": "8 hours",
+    "saving_throw": "None",
+    "damage": "N/A",
+    "area": "Special",
+    "description": {
+      "ja": "死体からアンデッドの僕を作り出す。術者のレベルに応じて強力なアンデッドを召喚できる。",
+      "en": "Creates undead servants from corpses. Summons more powerful undead based on caster's level."
+    },
+    "components": ["verbal", "somatic"],
+    "image": "/assets/images/spells/animate_dead.png"
   }
 ]

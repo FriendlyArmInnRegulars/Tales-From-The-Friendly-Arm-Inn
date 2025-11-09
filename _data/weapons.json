@@ -1,25 +1,186 @@
 [
   {
-    "id": "example_sword",
+    "id": "flame_tongue",
     "name": {
-      "ja": "例：炎の剣+2",
-      "en": "Example: Flame Sword +2"
+      "ja": "フレイム・タン+1",
+      "en": "Flame Tongue +1"
+    },
+    "type": "longsword",
+    "enchantment": 1,
+    "damage": "1d8+1",
+    "special": {
+      "ja": "追加1d4炎ダメージ、トロールに追加2d6ダメージ",
+      "en": "Additional 1d4 fire damage, +2d6 vs trolls"
+    },
+    "thac0": 1,
+    "weight": 4,
+    "speed": 3,
+    "location": {
+      "ja": "EET: ダーラグの塔 地下3階",
+      "en": "EET: Durlag's Tower, 3rd basement level"
+    },
+    "usable_by": ["fighter", "paladin", "ranger", "bard"],
+    "image": "/assets/images/items/flame_tongue.png"
+  },
+  {
+    "id": "varscona",
+    "name": {
+      "ja": "ヴァースコナ+2",
+      "en": "Varscona +2"
     },
     "type": "longsword",
     "enchantment": 2,
     "damage": "1d8+2",
     "special": {
-      "ja": "追加1d4炎ダメージ",
-      "en": "Additional 1d4 fire damage"
+      "ja": "追加1d6冷気ダメージ",
+      "en": "Additional 1d6 cold damage"
     },
     "thac0": 2,
-    "weight": 4,
+    "weight": 3,
     "speed": 3,
     "location": {
-      "ja": "EET: ダーゴンの洞窟",
-      "en": "EET: Durlag's Tower"
+      "ja": "EET: ベレゴストのソーシン（商人）から購入",
+      "en": "EET: Purchase from Thalantyr in Beregost"
     },
     "usable_by": ["fighter", "paladin", "ranger", "bard"],
-    "image": "/assets/images/items/flame_sword.png"
+    "image": "/assets/images/items/varscona.png"
+  },
+  {
+    "id": "spider_bane",
+    "name": {
+      "ja": "スパイダーズ・ベイン",
+      "en": "Spider's Bane"
+    },
+    "type": "greatsword",
+    "enchantment": 2,
+    "damage": "1d10+2",
+    "special": {
+      "ja": "蜘蛛に対してスロー効果、毒に対する完全耐性",
+      "en": "Slows spiders, immunity to poison"
+    },
+    "thac0": 2,
+    "weight": 10,
+    "speed": 8,
+    "location": {
+      "ja": "EET: クロークウッドの蜘蛛の巣エリア",
+      "en": "EET: Cloakwood spider area"
+    },
+    "usable_by": ["fighter", "paladin", "ranger"],
+    "image": "/assets/images/items/spider_bane.png"
+  },
+  {
+    "id": "composite_longbow_1",
+    "name": {
+      "ja": "コンポジット・ロングボウ+1",
+      "en": "Composite Long Bow +1"
+    },
+    "type": "bow",
+    "enchantment": 1,
+    "damage": "1d8+1",
+    "special": {
+      "ja": "筋力2以上のダメージボーナス",
+      "en": "Strength damage bonus +2"
+    },
+    "thac0": 1,
+    "weight": 9,
+    "speed": 6,
+    "location": {
+      "ja": "EET: 各地の商人から購入可能",
+      "en": "EET: Available from various merchants"
+    },
+    "usable_by": ["fighter", "ranger", "thief"],
+    "image": "/assets/images/items/composite_bow.png"
+  },
+  {
+    "id": "deadshot",
+    "name": {
+      "ja": "デッドショット+2",
+      "en": "The Dead Shot +2"
+    },
+    "type": "bow",
+    "enchantment": 2,
+    "damage": "1d8+2",
+    "special": {
+      "ja": "THAC0に追加+3ボーナス",
+      "en": "Additional +3 THAC0 bonus"
+    },
+    "thac0": 5,
+    "weight": 7,
+    "speed": 4,
+    "location": {
+      "ja": "EET: バルダーズゲート上層の泥棒ギルド",
+      "en": "EET: Thieves' Guild in Baldur's Gate"
+    },
+    "usable_by": ["fighter", "ranger", "thief"],
+    "image": "/assets/images/items/deadshot.png"
+  },
+  {
+    "id": "ashideena",
+    "name": {
+      "ja": "アシディーナ+2",
+      "en": "Ashideena +2"
+    },
+    "type": "mace",
+    "enchantment": 2,
+    "damage": "1d6+2",
+    "special": {
+      "ja": "追加1d6電撃ダメージ",
+      "en": "Additional 1d6 electrical damage"
+    },
+    "thac0": 2,
+    "weight": 6,
+    "speed": 5,
+    "location": {
+      "ja": "EET: ダーラグの塔",
+      "en": "EET: Durlag's Tower"
+    },
+    "usable_by": ["cleric", "druid", "fighter"],
+    "image": "/assets/images/items/ashideena.png"
+  },
+  {
+    "id": "staff_magi",
+    "name": {
+      "ja": "メイジの杖+2",
+      "en": "Staff of the Magi +2"
+    },
+    "type": "staff",
+    "enchantment": 2,
+    "damage": "1d6+2",
+    "special": {
+      "ja": "呪文の詠唱を妨害されない、魔法耐性50%",
+      "en": "Protection from spell disruption, 50% magic resistance"
+    },
+    "thac0": 2,
+    "weight": 3,
+    "speed": 1,
+    "location": {
+      "ja": "IWD2-EET: ドラゴンズ・アイ",
+      "en": "IWD2-EET: Dragon's Eye"
+    },
+    "usable_by": ["mage", "sorcerer"],
+    "image": "/assets/images/items/staff_magi.png"
+  },
+  {
+    "id": "pale_justice",
+    "name": {
+      "ja": "ペイル・ジャスティス+2",
+      "en": "Pale Justice +2"
+    },
+    "type": "greatsword",
+    "enchantment": 2,
+    "damage": "1d10+2",
+    "special": {
+      "ja": "アンデッドに対して追加1d10ダメージ",
+      "en": "Additional 1d10 damage vs undead"
+    },
+    "thac0": 2,
+    "weight": 10,
+    "speed": 8,
+    "location": {
+      "ja": "IWD1-EET: ケアン・ダインの墓地",
+      "en": "IWD1-EET: Kuldahar graveyard"
+    },
+    "usable_by": ["paladin"],
+    "image": "/assets/images/items/pale_justice.png"
   }
 ]

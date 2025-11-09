@@ -1,13 +1,13 @@
 [
   {
-    "id": "example_npc",
+    "id": "minsc",
     "name": "Minsc",
     "race": "Human",
     "class": "Ranger",
     "alignment": "Lawful Good",
     "description": {
-      "ja": "ミンスクはラシーメン出身のレンジャーで、ハムスターのブーと共に旅をしている。",
-      "en": "Minsc is a ranger from Rashemen, traveling with his hamster Boo."
+      "ja": "ミンスクはラシーメン出身のレンジャーで、ミニチュア・ジャイアント・スペース・ハムスターのブーと共に旅をしている。正義感が強く、悪を倒すことに情熱を燃やす。",
+      "en": "Minsc is a ranger from Rashemen, traveling with his miniature giant space hamster Boo. He has a strong sense of justice and is passionate about defeating evil."
     },
     "stats": {
       "str": 18,
@@ -26,5 +26,201 @@
       "en": "Accept the quest to rescue Dynaheir"
     },
     "image": "/assets/images/npcs/minsc.png"
+  },
+  {
+    "id": "imoen",
+    "name": "Imoen",
+    "race": "Human",
+    "class": "Thief",
+    "alignment": "Neutral Good",
+    "description": {
+      "ja": "主人公の幼馴染。明るく好奇心旺盛な性格で、冒険を楽しんでいる。盗賊としての才能を持つ。",
+      "en": "The protagonist's childhood friend. Cheerful and curious, she enjoys adventure. Has natural talent as a thief."
+    },
+    "stats": {
+      "str": 9,
+      "dex": 18,
+      "con": 16,
+      "int": 17,
+      "wis": 11,
+      "cha": 16
+    },
+    "location": {
+      "ja": "EET: キャンドルキープ",
+      "en": "EET: Candlekeep"
+    },
+    "recruitment": {
+      "ja": "ゲーム開始直後に自動的に仲間になる",
+      "en": "Automatically joins at the start of the game"
+    },
+    "image": "/assets/images/npcs/imoen.png"
+  },
+  {
+    "id": "jaheira",
+    "name": "Jaheira",
+    "race": "Half-Elf",
+    "class": "Fighter/Druid",
+    "alignment": "True Neutral",
+    "description": {
+      "ja": "ハーパーズの一員である経験豊富なドルイド・ファイター。自然の守護者として活動し、カリードの妻でもある。",
+      "en": "An experienced Fighter/Druid and member of the Harpers. Serves as a guardian of nature and is Khalid's wife."
+    },
+    "stats": {
+      "str": 15,
+      "dex": 14,
+      "con": 17,
+      "int": 10,
+      "wis": 14,
+      "cha": 15
+    },
+    "location": {
+      "ja": "EET: フレンドリー・アーム・イン",
+      "en": "EET: Friendly Arm Inn"
+    },
+    "recruitment": {
+      "ja": "カリードと共に仲間に誘われる",
+      "en": "Invited to join along with Khalid"
+    },
+    "image": "/assets/images/npcs/jaheira.png"
+  },
+  {
+    "id": "khalid",
+    "name": "Khalid",
+    "race": "Half-Elf",
+    "class": "Fighter",
+    "alignment": "Neutral Good",
+    "description": {
+      "ja": "ジャヘイラの夫で、ハーパーズの一員。臆病な性格だが、勇敢に戦う優秀なファイター。",
+      "en": "Jaheira's husband and a Harper member. Despite his timid nature, he's a skilled and brave fighter."
+    },
+    "stats": {
+      "str": 15,
+      "dex": 16,
+      "con": 17,
+      "int": 12,
+      "wis": 10,
+      "cha": 9
+    },
+    "location": {
+      "ja": "EET: フレンドリー・アーム・イン",
+      "en": "EET: Friendly Arm Inn"
+    },
+    "recruitment": {
+      "ja": "ジャヘイラと共に仲間に誘われる",
+      "en": "Invited to join along with Jaheira"
+    },
+    "image": "/assets/images/npcs/khalid.png"
+  },
+  {
+    "id": "dynaheir",
+    "name": "Dynaheir",
+    "race": "Human",
+    "class": "Mage",
+    "alignment": "Lawful Good",
+    "description": {
+      "ja": "ラシーメン出身の魔法使いで、ミンスクの魔女（Witch）。知的で落ち着いた性格で、強力な魔法を使う。",
+      "en": "A mage from Rashemen and Minsc's witch. Intelligent and composed, she wields powerful magic."
+    },
+    "stats": {
+      "str": 11,
+      "dex": 13,
+      "con": 16,
+      "int": 17,
+      "wis": 11,
+      "cha": 12
+    },
+    "location": {
+      "ja": "EET: ナシュケル鉱山近くのノールの拠点",
+      "en": "EET: Gnoll Stronghold near Nashkel Mines"
+    },
+    "recruitment": {
+      "ja": "ノールの拠点から救出する",
+      "en": "Rescue her from the Gnoll Stronghold"
+    },
+    "image": "/assets/images/npcs/dynaheir.png"
+  },
+  {
+    "id": "edwin",
+    "name": "Edwin Odesseiron",
+    "race": "Human",
+    "class": "Mage",
+    "alignment": "Lawful Evil",
+    "description": {
+      "ja": "レッド・ウィザードの傲慢な魔法使い。自分の力に絶対的な自信を持ち、常に他者を見下している。",
+      "en": "An arrogant Red Wizard. Has absolute confidence in his power and constantly looks down on others."
+    },
+    "stats": {
+      "str": 9,
+      "dex": 10,
+      "con": 16,
+      "int": 18,
+      "wis": 9,
+      "cha": 10
+    },
+    "location": {
+      "ja": "EET: ナシュケルの街",
+      "en": "EET: Nashkel"
+    },
+    "recruitment": {
+      "ja": "ダイナヘアを殺す依頼を受ける（ダイナヘアとは同時パーティ不可）",
+      "en": "Accept his request to kill Dynaheir (mutually exclusive with Dynaheir)"
+    },
+    "image": "/assets/images/npcs/edwin.png"
+  },
+  {
+    "id": "viconia",
+    "name": "Viconia DeVir",
+    "race": "Drow",
+    "class": "Cleric",
+    "alignment": "Neutral Evil",
+    "description": {
+      "ja": "シャー信仰のダーク・エルフのクレリック。地上に追放され、偏見と戦いながら生き延びている。",
+      "en": "A Dark Elf cleric of Shar. Exiled to the surface, she survives while fighting against prejudice."
+    },
+    "stats": {
+      "str": 10,
+      "dex": 19,
+      "con": 8,
+      "int": 16,
+      "wis": 15,
+      "cha": 14
+    },
+    "location": {
+      "ja": "EET: ペルドヴァータルの街",
+      "en": "EET: Peldvale"
+    },
+    "recruitment": {
+      "ja": "処刑されそうなところを助ける",
+      "en": "Save her from execution"
+    },
+    "image": "/assets/images/npcs/viconia.png"
+  },
+  {
+    "id": "keldorn",
+    "name": "Keldorn Firecam",
+    "race": "Human",
+    "class": "Paladin",
+    "alignment": "Lawful Good",
+    "description": {
+      "ja": "ヘルムの最も高潔なパラディン。正義と名誉を重んじ、常に弱者を守るために戦う。",
+      "en": "One of Helm's most noble paladins. Values justice and honor, always fighting to protect the weak."
+    },
+    "stats": {
+      "str": 17,
+      "dex": 9,
+      "con": 17,
+      "int": 12,
+      "wis": 16,
+      "cha": 17
+    },
+    "location": {
+      "ja": "EET: アスカトラ（BG2開始時）",
+      "en": "EET: Athkatla (BG2 start)"
+    },
+    "recruitment": {
+      "ja": "政府地区でのクエストで仲間になる",
+      "en": "Joins during a quest in the Government District"
+    },
+    "image": "/assets/images/npcs/keldorn.png"
   }
 ]
