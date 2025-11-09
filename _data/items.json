@@ -1,9 +1,28 @@
 [
   {
-    "id": "example_potion",
+    "id": "potion_extra_healing",
     "name": {
-      "ja": "例：特級治療のポーション",
-      "en": "Example: Potion of Superior Healing"
+      "ja": "特級治療のポーション",
+      "en": "Potion of Extra Healing"
+    },
+    "type": "potion",
+    "effect": {
+      "ja": "HP 3d8+3 回復",
+      "en": "Heals 3d8+3 HP"
+    },
+    "stackable": true,
+    "weight": 1,
+    "location": {
+      "ja": "EET: 寺院、薬草店",
+      "en": "EET: Temples, Apothecaries"
+    },
+    "image": "/assets/images/items/potion_extra_healing.png"
+  },
+  {
+    "id": "potion_superior_healing",
+    "name": {
+      "ja": "最上級治療のポーション",
+      "en": "Potion of Superior Healing"
     },
     "type": "potion",
     "effect": {
@@ -13,9 +32,256 @@
     "stackable": true,
     "weight": 1,
     "location": {
-      "ja": "EET: 寺院、薬草店",
-      "en": "EET: Temples, Apothecaries"
+      "ja": "EET: 高級薬草店",
+      "en": "EET: High-end apothecaries"
     },
-    "image": "/assets/images/items/potion_healing.png"
+    "image": "/assets/images/items/potion_superior_healing.png"
+  },
+  {
+    "id": "potion_invisibility",
+    "name": {
+      "ja": "透明化のポーション",
+      "en": "Potion of Invisibility"
+    },
+    "type": "potion",
+    "effect": {
+      "ja": "飲んだ者を透明化する。攻撃すると効果が切れる",
+      "en": "Makes drinker invisible. Effect ends when attacking"
+    },
+    "stackable": true,
+    "weight": 1,
+    "location": {
+      "ja": "EET: 魔法店、盗賊ギルド",
+      "en": "EET: Magic shops, Thieves' Guild"
+    },
+    "image": "/assets/images/items/potion_invisibility.png"
+  },
+  {
+    "id": "potion_haste",
+    "name": {
+      "ja": "加速のポーション",
+      "en": "Potion of Haste"
+    },
+    "type": "potion",
+    "effect": {
+      "ja": "移動速度と攻撃速度が2倍になる（20秒）",
+      "en": "Doubles movement and attack speed (20 seconds)"
+    },
+    "stackable": true,
+    "weight": 1,
+    "location": {
+      "ja": "EET: 魔法店",
+      "en": "EET: Magic shops"
+    },
+    "image": "/assets/images/items/potion_haste.png"
+  },
+  {
+    "id": "potion_firebreath",
+    "name": {
+      "ja": "火炎のポーション",
+      "en": "Potion of Firebreath"
+    },
+    "type": "potion",
+    "effect": {
+      "ja": "ドラゴンのブレスのような炎を吐く（6d10ダメージ）",
+      "en": "Breathe dragon-like fire (6d10 damage)"
+    },
+    "stackable": true,
+    "weight": 1,
+    "location": {
+      "ja": "EET: 高級魔法店",
+      "en": "EET: High-end magic shops"
+    },
+    "image": "/assets/images/items/potion_firebreath.png"
+  },
+  {
+    "id": "scroll_protection_magic",
+    "name": {
+      "ja": "魔法防御の巻物",
+      "en": "Scroll of Protection from Magic"
+    },
+    "type": "scroll",
+    "effect": {
+      "ja": "すべての魔法から完全に保護される（5ラウンド）",
+      "en": "Complete protection from all magic (5 rounds)"
+    },
+    "stackable": true,
+    "weight": 0,
+    "location": {
+      "ja": "EET: 高級魔法店、ウォッチャーズ・キープ",
+      "en": "EET: High-end magic shops, Watcher's Keep"
+    },
+    "image": "/assets/images/items/scroll_protection.png"
+  },
+  {
+    "id": "scroll_protection_undead",
+    "name": {
+      "ja": "アンデッド防御の巻物",
+      "en": "Scroll of Protection from Undead"
+    },
+    "type": "scroll",
+    "effect": {
+      "ja": "アンデッドから完全に保護される",
+      "en": "Complete protection from undead"
+    },
+    "stackable": true,
+    "weight": 0,
+    "location": {
+      "ja": "EET: 寺院、墓地",
+      "en": "EET: Temples, graveyards"
+    },
+    "image": "/assets/images/items/scroll_protection.png"
+  },
+  {
+    "id": "gem_andar",
+    "name": {
+      "ja": "アンダー宝石",
+      "en": "Andar Gem"
+    },
+    "type": "gem",
+    "effect": {
+      "ja": "価値の高い宝石（2000ゴールド）",
+      "en": "Valuable gem (2000 gold)"
+    },
+    "stackable": true,
+    "weight": 0,
+    "location": {
+      "ja": "EET: 宝箱、敵のドロップ",
+      "en": "EET: Treasure chests, enemy drops"
+    },
+    "image": "/assets/images/items/gem_andar.png"
+  },
+  {
+    "id": "bag_of_holding",
+    "name": {
+      "ja": "ホールディング・バッグ",
+      "en": "Bag of Holding"
+    },
+    "type": "quest_item",
+    "effect": {
+      "ja": "アイテムの所持数を大幅に増やせる魔法の袋",
+      "en": "Magical bag that greatly increases carrying capacity"
+    },
+    "stackable": false,
+    "weight": 2,
+    "location": {
+      "ja": "EET: 商人から購入",
+      "en": "EET: Purchase from merchants"
+    },
+    "image": "/assets/images/items/bag_holding.png"
+  },
+  {
+    "id": "golden_pantaloons",
+    "name": {
+      "ja": "黄金のズボン",
+      "en": "Golden Pantaloons"
+    },
+    "type": "quest_item",
+    "effect": {
+      "ja": "謎の黄金のズボン。後のシリーズで重要になる",
+      "en": "Mysterious golden pants. Important in later games"
+    },
+    "stackable": false,
+    "weight": 2,
+    "location": {
+      "ja": "EET: ベレゴストの民家",
+      "en": "EET: House in Beregost"
+    },
+    "image": "/assets/images/items/golden_pantaloons.png"
+  },
+  {
+    "id": "ring_wizardry",
+    "name": {
+      "ja": "魔術の指輪",
+      "en": "Ring of Wizardry"
+    },
+    "type": "ring",
+    "effect": {
+      "ja": "レベル1呪文スロットを2倍にする",
+      "en": "Doubles level 1 spell slots"
+    },
+    "stackable": false,
+    "weight": 0,
+    "location": {
+      "ja": "EET: フレンドリー・アーム・インの木の下",
+      "en": "EET: Under tree at Friendly Arm Inn"
+    },
+    "image": "/assets/images/items/ring_wizardry.png"
+  },
+  {
+    "id": "ring_regeneration",
+    "name": {
+      "ja": "再生の指輪",
+      "en": "Ring of Regeneration"
+    },
+    "type": "ring",
+    "effect": {
+      "ja": "HPが徐々に回復する（1HP/6秒）",
+      "en": "Gradually regenerates HP (1HP/6 seconds)"
+    },
+    "stackable": false,
+    "weight": 0,
+    "location": {
+      "ja": "EET: ダーラグの塔",
+      "en": "EET: Durlag's Tower"
+    },
+    "image": "/assets/images/items/ring_regeneration.png"
+  },
+  {
+    "id": "ring_gaxx",
+    "name": {
+      "ja": "ガックスの指輪",
+      "en": "Ring of Gaxx"
+    },
+    "type": "ring",
+    "effect": {
+      "ja": "AC+1、全セーヴ+2、透明化使用可能、HP再生",
+      "en": "+1 AC, +2 all saves, invisibility, HP regeneration"
+    },
+    "stackable": false,
+    "weight": 0,
+    "location": {
+      "ja": "EET: 墓地地区の地下墓地",
+      "en": "EET: Graveyard District crypts"
+    },
+    "image": "/assets/images/items/ring_gaxx.png"
+  },
+  {
+    "id": "amulet_power",
+    "name": {
+      "ja": "パワーのアミュレット",
+      "en": "Amulet of Power"
+    },
+    "type": "amulet",
+    "effect": {
+      "ja": "AC+1、全セーヴ+1、魔法耐性5%",
+      "en": "+1 AC, +1 all saves, 5% magic resistance"
+    },
+    "stackable": false,
+    "weight": 1,
+    "location": {
+      "ja": "EET: ウォッチャーズ・キープ",
+      "en": "EET: Watcher's Keep"
+    },
+    "image": "/assets/images/items/amulet_power.png"
+  },
+  {
+    "id": "cloak_balduran",
+    "name": {
+      "ja": "バルダランのクローク",
+      "en": "Cloak of Balduran"
+    },
+    "type": "cloak",
+    "effect": {
+      "ja": "AC+1、魔法耐性25%、セーヴ+1",
+      "en": "+1 AC, 25% magic resistance, +1 saves"
+    },
+    "stackable": false,
+    "weight": 3,
+    "location": {
+      "ja": "EET: ダーラグの塔",
+      "en": "EET: Durlag's Tower"
+    },
+    "image": "/assets/images/items/cloak_balduran.png"
   }
 ]

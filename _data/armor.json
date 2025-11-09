@@ -1,9 +1,9 @@
 [
   {
-    "id": "example_plate",
+    "id": "full_plate_1",
     "name": {
-      "ja": "例：フル プレート メイル+1",
-      "en": "Example: Full Plate Mail +1"
+      "ja": "フル プレート メイル+1",
+      "en": "Full Plate Mail +1"
     },
     "type": "heavy_armor",
     "ac": 0,
@@ -14,10 +14,241 @@
       "en": "None"
     },
     "location": {
-      "ja": "EET: 商人から購入",
-      "en": "EET: Purchase from merchant"
+      "ja": "EET: 高級武器店で購入",
+      "en": "EET: Purchase from high-end armorer"
     },
     "usable_by": ["fighter", "paladin", "ranger"],
-    "image": "/assets/images/items/full_plate.png"
+    "image": "/assets/images/items/full_plate_1.png"
+  },
+  {
+    "id": "ankheg_plate",
+    "name": {
+      "ja": "アンケグ・プレート・メイル",
+      "en": "Ankheg Plate Mail"
+    },
+    "type": "heavy_armor",
+    "ac": 1,
+    "enchantment": 0,
+    "weight": 25,
+    "special": {
+      "ja": "通常のプレートメイルより軽量、AC1",
+      "en": "Lighter than normal plate mail, AC 1"
+    },
+    "location": {
+      "ja": "EET: アンケグの殻を鍛冶屋に届ける",
+      "en": "EET: Bring Ankheg shell to blacksmith"
+    },
+    "usable_by": ["fighter", "paladin", "ranger"],
+    "image": "/assets/images/items/ankheg_plate.png"
+  },
+  {
+    "id": "drow_full_plate",
+    "name": {
+      "ja": "ドラウ・フル・プレート+5",
+      "en": "Drow Full Plate +5"
+    },
+    "type": "heavy_armor",
+    "ac": -6,
+    "enchantment": 5,
+    "weight": 20,
+    "special": {
+      "ja": "魔法耐性25%、地上に出ると通常のプレートに劣化",
+      "en": "25% magic resistance, degrades to normal plate in sunlight"
+    },
+    "location": {
+      "ja": "EET: アンダーダーク",
+      "en": "EET: Underdark"
+    },
+    "usable_by": ["fighter", "paladin", "ranger"],
+    "image": "/assets/images/items/drow_plate.png"
+  },
+  {
+    "id": "red_dragon_scale",
+    "name": {
+      "ja": "レッド・ドラゴン・スケール",
+      "en": "Red Dragon Scale"
+    },
+    "type": "heavy_armor",
+    "ac": -1,
+    "enchantment": 0,
+    "weight": 30,
+    "special": {
+      "ja": "炎に対する完全耐性、AC-1",
+      "en": "Immunity to fire, AC -1"
+    },
+    "location": {
+      "ja": "EET: レッド・ドラゴンの鱗を鍛冶屋に届ける",
+      "en": "EET: Bring Red Dragon scales to craftsman"
+    },
+    "usable_by": ["fighter", "paladin", "ranger", "bard"],
+    "image": "/assets/images/items/red_dragon_scale.png"
+  },
+  {
+    "id": "white_dragon_scale",
+    "name": {
+      "ja": "ホワイト・ドラゴン・スケール",
+      "en": "White Dragon Scale"
+    },
+    "type": "medium_armor",
+    "ac": 1,
+    "enchantment": 0,
+    "weight": 20,
+    "special": {
+      "ja": "冷気に対する完全耐性、AC1",
+      "en": "Immunity to cold, AC 1"
+    },
+    "location": {
+      "ja": "EET: ホワイト・ドラゴンの鱗を鍛冶屋に届ける",
+      "en": "EET: Bring White Dragon scales to craftsman"
+    },
+    "usable_by": ["fighter", "paladin", "ranger", "bard", "thief"],
+    "image": "/assets/images/items/white_dragon_scale.png"
+  },
+  {
+    "id": "shadow_dragon_scale",
+    "name": {
+      "ja": "シャドウ・ドラゴン・スケール",
+      "en": "Shadow Dragon Scale"
+    },
+    "type": "medium_armor",
+    "ac": 1,
+    "enchantment": 0,
+    "weight": 15,
+    "special": {
+      "ja": "ステルス+15、レベルドレインに耐性",
+      "en": "Stealth +15, resistance to level drain"
+    },
+    "location": {
+      "ja": "EET: シャドウ・ドラゴンの鱗を鍛冶屋に届ける",
+      "en": "EET: Bring Shadow Dragon scales to craftsman"
+    },
+    "usable_by": ["fighter", "ranger", "thief", "monk"],
+    "image": "/assets/images/items/shadow_dragon_scale.png"
+  },
+  {
+    "id": "elven_chain",
+    "name": {
+      "ja": "エルヴン・チェインメイル",
+      "en": "Elven Chain Mail"
+    },
+    "type": "medium_armor",
+    "ac": 5,
+    "enchantment": 0,
+    "weight": 15,
+    "special": {
+      "ja": "盗賊と魔法使いが装備可能",
+      "en": "Usable by thieves and mages"
+    },
+    "location": {
+      "ja": "EET: ダヴァエオーンから入手",
+      "en": "EET: Obtained from Davaeorn"
+    },
+    "usable_by": ["fighter", "ranger", "thief", "mage", "bard"],
+    "image": "/assets/images/items/elven_chain.png"
+  },
+  {
+    "id": "armor_faith",
+    "name": {
+      "ja": "フェイスの鎧+3",
+      "en": "Armor of Faith +3"
+    },
+    "type": "heavy_armor",
+    "ac": -1,
+    "enchantment": 3,
+    "weight": 35,
+    "special": {
+      "ja": "AC-1、全セーヴィングスロー+3",
+      "en": "AC -1, +3 to all saving throws"
+    },
+    "location": {
+      "ja": "EET: 寺院地区のクエスト報酬",
+      "en": "EET: Temple District quest reward"
+    },
+    "usable_by": ["cleric"],
+    "image": "/assets/images/items/armor_faith.png"
+  },
+  {
+    "id": "studded_leather_5",
+    "name": {
+      "ja": "スタッド・レザー+5：シャドウ・アーマー",
+      "en": "Studded Leather +5: Shadow Armor"
+    },
+    "type": "light_armor",
+    "ac": -1,
+    "enchantment": 5,
+    "weight": 8,
+    "special": {
+      "ja": "ステルス+15、盗賊技能+10%",
+      "en": "Stealth +15, +10% to thief skills"
+    },
+    "location": {
+      "ja": "EET: 影の砦",
+      "en": "EET: Shadow Thieves' Guildhall"
+    },
+    "usable_by": ["thief", "ranger"],
+    "image": "/assets/images/items/shadow_armor.png"
+  },
+  {
+    "id": "robe_vecna",
+    "name": {
+      "ja": "ヴェクナのローブ",
+      "en": "Robe of Vecna"
+    },
+    "type": "robe",
+    "ac": 5,
+    "enchantment": 0,
+    "weight": 4,
+    "special": {
+      "ja": "AC5、魔法耐性10%、詠唱時間が半分に",
+      "en": "AC 5, 10% magic resistance, halves casting time"
+    },
+    "location": {
+      "ja": "EET: ウォッチャーズ・キープ",
+      "en": "EET: Watcher's Keep"
+    },
+    "usable_by": ["mage", "sorcerer", "cleric"],
+    "image": "/assets/images/items/robe_vecna.png"
+  },
+  {
+    "id": "robe_archmagi",
+    "name": {
+      "ja": "大魔術師のローブ",
+      "en": "Robe of the Archmagi"
+    },
+    "type": "robe",
+    "ac": 5,
+    "enchantment": 0,
+    "weight": 4,
+    "special": {
+      "ja": "AC5、魔法耐性5%、全セーヴィングスロー+1",
+      "en": "AC 5, 5% magic resistance, +1 to all saves"
+    },
+    "location": {
+      "ja": "EET: 高級魔法店で購入",
+      "en": "EET: Purchase from high-end magic shop"
+    },
+    "usable_by": ["mage", "sorcerer"],
+    "image": "/assets/images/items/robe_archmagi.png"
+  },
+  {
+    "id": "sensate_amulet",
+    "name": {
+      "ja": "センセイト・アミュレット",
+      "en": "Sensate Amulet"
+    },
+    "type": "amulet",
+    "ac": 2,
+    "enchantment": 0,
+    "weight": 1,
+    "special": {
+      "ja": "ACに+2ボーナス、知性+1",
+      "en": "+2 AC bonus, +1 Intelligence"
+    },
+    "location": {
+      "ja": "EET: アスカトラのスラム街",
+      "en": "EET: Athkatla Slums"
+    },
+    "usable_by": ["all"],
+    "image": "/assets/images/items/sensate_amulet.png"
   }
 ]

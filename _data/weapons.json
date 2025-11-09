@@ -182,5 +182,235 @@
     },
     "usable_by": ["paladin"],
     "image": "/assets/images/items/pale_justice.png"
+  },
+  {
+    "id": "daystar",
+    "name": {
+      "ja": "デイスター+2",
+      "en": "Daystar +2"
+    },
+    "type": "longsword",
+    "enchantment": 2,
+    "damage": "1d8+2",
+    "special": {
+      "ja": "アンデッドに2倍ダメージ、サンレイ使用可能（1日1回）",
+      "en": "Double damage vs undead, can cast Sunray once per day"
+    },
+    "thac0": 2,
+    "weight": 3,
+    "speed": 1,
+    "location": {
+      "ja": "EET: アスカトラの地下墓地",
+      "en": "EET: Athkatla Crypts"
+    },
+    "usable_by": ["fighter", "paladin", "ranger", "bard"],
+    "image": "/assets/images/items/daystar.png"
+  },
+  {
+    "id": "celestial_fury",
+    "name": {
+      "ja": "セレスチャル・フューリー+3",
+      "en": "Celestial Fury +3"
+    },
+    "type": "katana",
+    "enchantment": 3,
+    "damage": "1d10+3",
+    "special": {
+      "ja": "追加1d5電撃ダメージ、5%の確率でスタン",
+      "en": "Additional 1d5 electrical damage, 5% chance to stun"
+    },
+    "thac0": 3,
+    "weight": 4,
+    "speed": 1,
+    "location": {
+      "ja": "EET: 影の砦",
+      "en": "EET: Shadow Thieves' Guildhall"
+    },
+    "usable_by": ["fighter", "ranger", "thief", "monk"],
+    "image": "/assets/images/items/celestial_fury.png"
+  },
+  {
+    "id": "flail_of_ages",
+    "name": {
+      "ja": "フレイル・オブ・エイジズ+3",
+      "en": "Flail of Ages +3"
+    },
+    "type": "flail",
+    "enchantment": 3,
+    "damage": "1d6+3",
+    "special": {
+      "ja": "追加炎・冷気・酸ダメージ各1d4、スロー効果",
+      "en": "Additional 1d4 fire, cold, and acid damage, slows target"
+    },
+    "thac0": 3,
+    "weight": 12,
+    "speed": 3,
+    "location": {
+      "ja": "EET: デアニス砦の地下（3つの頭を組み合わせる）",
+      "en": "EET: De'Arnise Keep dungeons (combine 3 heads)"
+    },
+    "usable_by": ["fighter", "cleric"],
+    "image": "/assets/images/items/flail_of_ages.png"
+  },
+  {
+    "id": "carsomyr",
+    "name": {
+      "ja": "カーソミア+5",
+      "en": "Carsomyr +5"
+    },
+    "type": "greatsword",
+    "enchantment": 5,
+    "damage": "1d10+5",
+    "special": {
+      "ja": "ディスペル・マジック効果、魔法耐性50%、悪に追加ダメージ",
+      "en": "Dispel Magic on hit, 50% magic resistance, bonus damage vs evil"
+    },
+    "thac0": 5,
+    "weight": 12,
+    "speed": 5,
+    "location": {
+      "ja": "EET: フィアカラグ砦",
+      "en": "EET: Firkraag's Lair"
+    },
+    "usable_by": ["paladin"],
+    "image": "/assets/images/items/carsomyr.png"
+  },
+  {
+    "id": "staff_of_ram",
+    "name": {
+      "ja": "ラムの杖+4",
+      "en": "Staff of the Ram +4"
+    },
+    "type": "staff",
+    "enchantment": 4,
+    "damage": "1d6+4",
+    "special": {
+      "ja": "ノックバック効果、建造物に追加ダメージ",
+      "en": "Knockback effect, bonus damage to constructs"
+    },
+    "thac0": 4,
+    "weight": 4,
+    "speed": 1,
+    "location": {
+      "ja": "EET: ウォッチャーズ・キープ",
+      "en": "EET: Watcher's Keep"
+    },
+    "usable_by": ["druid", "monk"],
+    "image": "/assets/images/items/staff_of_ram.png"
+  },
+  {
+    "id": "gesen_bow",
+    "name": {
+      "ja": "ゲセンの弓弦+4",
+      "en": "Gesen Bow String +4"
+    },
+    "type": "bow",
+    "enchantment": 4,
+    "damage": "1d8+4",
+    "special": {
+      "ja": "矢が不要、追加1d8電撃ダメージ",
+      "en": "Creates own ammunition, additional 1d8 electrical damage"
+    },
+    "thac0": 4,
+    "weight": 5,
+    "speed": 2,
+    "location": {
+      "ja": "EET: 風の槍の丘",
+      "en": "EET: Windspear Hills"
+    },
+    "usable_by": ["fighter", "ranger", "thief"],
+    "image": "/assets/images/items/gesen_bow.png"
+  },
+  {
+    "id": "tuigan_bow",
+    "name": {
+      "ja": "トゥイガンの弓+1",
+      "en": "Tuigan Bow +1"
+    },
+    "type": "bow",
+    "enchantment": 1,
+    "damage": "1d8+1",
+    "special": {
+      "ja": "攻撃速度+1（1ラウンドに追加攻撃）",
+      "en": "Speed +1 (extra attack per round)"
+    },
+    "thac0": 1,
+    "weight": 5,
+    "speed": 4,
+    "location": {
+      "ja": "EET: リベリオン・エイドリン（商人）",
+      "en": "EET: Ribald's shop in Waukeen's Promenade"
+    },
+    "usable_by": ["fighter", "ranger", "thief"],
+    "image": "/assets/images/items/tuigan_bow.png"
+  },
+  {
+    "id": "silver_sword",
+    "name": {
+      "ja": "シルバー・ソード+3",
+      "en": "Silver Sword +3"
+    },
+    "type": "greatsword",
+    "enchantment": 3,
+    "damage": "1d10+3",
+    "special": {
+      "ja": "プレーン・シフトの生物に追加ダメージ、銀製",
+      "en": "Bonus damage vs planar creatures, silver material"
+    },
+    "thac0": 3,
+    "weight": 8,
+    "speed": 6,
+    "location": {
+      "ja": "EET: ギスヤンキから入手",
+      "en": "EET: Obtained from Githyanki"
+    },
+    "usable_by": ["fighter", "paladin", "ranger"],
+    "image": "/assets/images/items/silver_sword.png"
+  },
+  {
+    "id": "mace_of_disruption",
+    "name": {
+      "ja": "メイス・オブ・ディスラプション+2",
+      "en": "Mace of Disruption +2"
+    },
+    "type": "mace",
+    "enchantment": 2,
+    "damage": "1d6+2",
+    "special": {
+      "ja": "アンデッドを5%で即死、追加2d6ダメージ",
+      "en": "5% chance to destroy undead, additional 2d6 damage vs undead"
+    },
+    "thac0": 2,
+    "weight": 6,
+    "speed": 4,
+    "location": {
+      "ja": "EET: 墓地地区の地下墓地",
+      "en": "EET: Graveyard District crypts"
+    },
+    "usable_by": ["cleric", "fighter"],
+    "image": "/assets/images/items/mace_disruption.png"
+  },
+  {
+    "id": "blackrazor",
+    "name": {
+      "ja": "ブラックレイザー+3",
+      "en": "Blackrazor +3"
+    },
+    "type": "greatsword",
+    "enchantment": 3,
+    "damage": "1d10+3",
+    "special": {
+      "ja": "敵を倒すとHP回復、ヘイスト効果、筋力上昇",
+      "en": "Heals on kill, grants haste, increases strength"
+    },
+    "thac0": 3,
+    "weight": 8,
+    "speed": 3,
+    "location": {
+      "ja": "EET: ウォッチャーズ・キープ",
+      "en": "EET: Watcher's Keep"
+    },
+    "usable_by": ["fighter", "paladin", "ranger"],
+    "image": "/assets/images/items/blackrazor.png"
   }
 ]
