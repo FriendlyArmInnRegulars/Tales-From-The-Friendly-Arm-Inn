@@ -1,9 +1,9 @@
 [
   {
-    "id": "example_boss",
+    "id": "sarevok",
     "name": {
-      "ja": "例：サレヴォク",
-      "en": "Example: Sarevok"
+      "ja": "サレヴォク",
+      "en": "Sarevok"
     },
     "type": "boss",
     "hp": 185,
@@ -30,5 +30,357 @@
       "en": "EET: Undercity"
     },
     "image": "/assets/images/enemies/sarevok.png"
+  },
+  {
+    "id": "firkraag",
+    "name": {
+      "ja": "フィアカラグ（レッド・ドラゴン）",
+      "en": "Firkraag (Red Dragon)"
+    },
+    "type": "dragon",
+    "hp": 184,
+    "ac": -11,
+    "thac0": -6,
+    "xp": 24000,
+    "resistances": {
+      "physical": 0,
+      "fire": 100,
+      "cold": 50,
+      "electricity": 50,
+      "magic": 50
+    },
+    "vulnerabilities": {
+      "ja": ["冷気魔法", "魔法武器"],
+      "en": ["Cold magic", "Magical weapons"]
+    },
+    "strategy": {
+      "ja": "炎に完全耐性を持つため冷気魔法が有効。ブレス攻撃（20d10炎ダメージ）に注意。プロテクション・フロム・ファイアで対策を。物理攻撃は+3以上の武器が必要。",
+      "en": "Immune to fire, use cold magic. Beware breath weapon (20d10 fire). Use Protection from Fire. Requires +3 or better weapons for physical attacks."
+    },
+    "location": {
+      "ja": "EET: フィアカラグの住処（風の槍の丘）",
+      "en": "EET: Firkraag's Lair (Windspear Hills)"
+    },
+    "image": "/assets/images/enemies/firkraag.png"
+  },
+  {
+    "id": "irenicus",
+    "name": {
+      "ja": "ジョン・アイレニカス",
+      "en": "Jon Irenicus"
+    },
+    "type": "boss",
+    "hp": 90,
+    "ac": -2,
+    "thac0": 8,
+    "xp": 36000,
+    "resistances": {
+      "physical": 0,
+      "fire": 0,
+      "cold": 0,
+      "electricity": 0,
+      "magic": 60
+    },
+    "vulnerabilities": {
+      "ja": ["魔法耐性低下", "ブリーチ"],
+      "en": ["Lower Magic Resistance", "Breach"]
+    },
+    "strategy": {
+      "ja": "BG2のメインヴィラン。強力な防御魔法（ストーンスキン、プロテクション）を使用。まずブリーチで防御を剥がし、魔法耐性低下後に攻撃。時間停止を使うので注意。",
+      "en": "BG2's main villain. Uses powerful defensive magic (Stoneskin, Protections). First use Breach to remove defenses, then Lower Magic Resistance. Beware of Time Stop."
+    },
+    "location": {
+      "ja": "EET: 地獄（最終決戦）",
+      "en": "EET: Hell (final battle)"
+    },
+    "image": "/assets/images/enemies/irenicus.png"
+  },
+  {
+    "id": "demogorgon",
+    "name": {
+      "ja": "デモゴルゴン",
+      "en": "Demogorgon"
+    },
+    "type": "boss",
+    "hp": 400,
+    "ac": -12,
+    "thac0": -10,
+    "xp": 50000,
+    "resistances": {
+      "physical": 60,
+      "fire": 100,
+      "cold": 100,
+      "electricity": 100,
+      "magic": 90
+    },
+    "vulnerabilities": {
+      "ja": ["インプリズメント", "魔法武器+4以上"],
+      "en": ["Imprisonment", "Magical weapons +4 or better"]
+    },
+    "strategy": {
+      "ja": "ゲーム最強の敵。即死魔法、チャーム、デスゲイズを使用。プロテクション・フロム・マジック必須。インプリズメントで即座に倒すか、+4以上の武器で物理攻撃。召喚を使って時間稼ぎを。",
+      "en": "Game's toughest enemy. Uses instant death, charm, and death gaze. Protection from Magic essential. Either use Imprisonment to defeat instantly, or attack with +4 weapons. Use summons to buy time."
+    },
+    "location": {
+      "ja": "EET: ウォッチャーズ・キープ",
+      "en": "EET: Watcher's Keep"
+    },
+    "image": "/assets/images/enemies/demogorgon.png"
+  },
+  {
+    "id": "kangaxx",
+    "name": {
+      "ja": "カンガックス（デミリッチ）",
+      "en": "Kangaxx (Demilich)"
+    },
+    "type": "boss",
+    "hp": 142,
+    "ac": -10,
+    "thac0": -7,
+    "xp": 34000,
+    "resistances": {
+      "physical": 90,
+      "fire": 100,
+      "cold": 100,
+      "electricity": 100,
+      "magic": 80
+    },
+    "vulnerabilities": {
+      "ja": ["マジック・ミサイル", "プロテクション・フロム・マジック"],
+      "en": ["Magic Missile", "Protection from Magic"]
+    },
+    "strategy": {
+      "ja": "インプリズメント使用でパーティ全滅の危険。プロテクション・フロム・マジックで完全防御可能。マジック・ミサイルが有効（魔法耐性無視）。物理攻撃はほぼ無効。",
+      "en": "Uses Imprisonment to wipe party. Protection from Magic makes you immune. Magic Missile is effective (ignores magic resistance). Physical attacks mostly useless."
+    },
+    "location": {
+      "ja": "EET: 墓地地区の地下墓地",
+      "en": "EET: Graveyard District crypts"
+    },
+    "image": "/assets/images/enemies/kangaxx.png"
+  },
+  {
+    "id": "beholder",
+    "name": {
+      "ja": "ビホルダー（目玉）",
+      "en": "Beholder"
+    },
+    "type": "common",
+    "hp": 75,
+    "ac": 0,
+    "thac0": 11,
+    "xp": 6000,
+    "resistances": {
+      "physical": 0,
+      "fire": 0,
+      "cold": 0,
+      "electricity": 0,
+      "magic": 0
+    },
+    "vulnerabilities": {
+      "ja": ["近接攻撃", "魔法耐性"],
+      "en": ["Melee attacks", "Magic resistance"]
+    },
+    "strategy": {
+      "ja": "アンチマジック・レイで魔法を無効化。シールド・オブ・バルダランで防げる。近接攻撃が最も有効。魔法使いは役に立たないので前衛で倒す。",
+      "en": "Anti-Magic Ray negates spells. Shield of Balduran blocks it. Melee attacks most effective. Mages are useless, use fighters."
+    },
+    "location": {
+      "ja": "EET: アンダーダーク",
+      "en": "EET: Underdark"
+    },
+    "image": "/assets/images/enemies/beholder.png"
+  },
+  {
+    "id": "mind_flayer",
+    "name": {
+      "ja": "マインド・フレイヤー",
+      "en": "Mind Flayer"
+    },
+    "type": "common",
+    "hp": 72,
+    "ac": -4,
+    "thac0": 13,
+    "xp": 5000,
+    "resistances": {
+      "physical": 0,
+      "fire": 0,
+      "cold": 0,
+      "electricity": 0,
+      "magic": 90
+    },
+    "vulnerabilities": {
+      "ja": ["知性ドレイン耐性装備", "遠距離攻撃"],
+      "en": ["Intelligence drain protection", "Ranged attacks"]
+    },
+    "strategy": {
+      "ja": "知性を吸収する攻撃（知性0で即死）。ヘルム・オブ・バルダランやケアレス・ソリロクィで防御。高い魔法耐性を持つので物理攻撃推奨。",
+      "en": "Drains Intelligence (instant death at 0 INT). Defend with Helm of Balduran or Kaylessa's Soliloquy. High magic resistance, use physical attacks."
+    },
+    "location": {
+      "ja": "EET: アンダーダーク",
+      "en": "EET: Underdark"
+    },
+    "image": "/assets/images/enemies/mind_flayer.png"
+  },
+  {
+    "id": "lich",
+    "name": {
+      "ja": "リッチ",
+      "en": "Lich"
+    },
+    "type": "undead",
+    "hp": 88,
+    "ac": -6,
+    "thac0": 10,
+    "xp": 9000,
+    "resistances": {
+      "physical": 50,
+      "fire": 50,
+      "cold": 100,
+      "electricity": 100,
+      "magic": 50
+    },
+    "vulnerabilities": {
+      "ja": ["魔法耐性低下", "アンデッド特効武器"],
+      "en": ["Lower Magic Resistance", "Undead-slaying weapons"]
+    },
+    "strategy": {
+      "ja": "強力な魔法使い型アンデッド。デス・スペル、ホールド、タイム・ストップを使用。ネガティブ・プレーン・プロテクション必須。魔法耐性を下げてから攻撃。",
+      "en": "Powerful undead mage. Uses Death Spell, Hold, Time Stop. Negative Plane Protection essential. Lower magic resistance before attacking."
+    },
+    "location": {
+      "ja": "EET: 各地の墓地、ダンジョン",
+      "en": "EET: Various crypts and dungeons"
+    },
+    "image": "/assets/images/enemies/lich.png"
+  },
+  {
+    "id": "frost_giant",
+    "name": {
+      "ja": "フロスト・ジャイアント",
+      "en": "Frost Giant"
+    },
+    "type": "common",
+    "hp": 115,
+    "ac": 0,
+    "thac0": 6,
+    "xp": 3000,
+    "resistances": {
+      "physical": 0,
+      "fire": 0,
+      "cold": 100,
+      "electricity": 0,
+      "magic": 0
+    },
+    "vulnerabilities": {
+      "ja": ["炎魔法", "遠距離攻撃"],
+      "en": ["Fire magic", "Ranged attacks"]
+    },
+    "strategy": {
+      "ja": "冷気に完全耐性。炎魔法が有効。巨大な近接攻撃力を持つので遠距離から攻撃推奨。スロー効果が有効。",
+      "en": "Immune to cold. Vulnerable to fire. Massive melee damage, attack from range. Slow is effective."
+    },
+    "location": {
+      "ja": "IWD1-EET: ドラゴンズ・アイ",
+      "en": "IWD1-EET: Dragon's Eye"
+    },
+    "image": "/assets/images/enemies/frost_giant.png"
+  },
+  {
+    "id": "davaeorn",
+    "name": {
+      "ja": "ダヴァエオーン",
+      "en": "Davaeorn"
+    },
+    "type": "boss",
+    "hp": 82,
+    "ac": 2,
+    "thac0": 16,
+    "xp": 8000,
+    "resistances": {
+      "physical": 0,
+      "fire": 0,
+      "cold": 0,
+      "electricity": 0,
+      "magic": 0
+    },
+    "vulnerabilities": {
+      "ja": ["魔法耐性低下", "遠距離攻撃"],
+      "en": ["Magic resistance debuffs", "Ranged attacks"]
+    },
+    "strategy": {
+      "ja": "BG1の重要なボス。ホールド、ファイアーボール、ライトニング・ボルトを使用。ガードとの連携に注意。魔法防御を優先的に解除し、遠距離攻撃で倒す。",
+      "en": "Important BG1 boss. Uses Hold, Fireball, Lightning Bolt. Beware guards. Strip magical defenses first, then use ranged attacks."
+    },
+    "location": {
+      "ja": "EET: クロークウッド鉱山",
+      "en": "EET: Cloakwood Mines"
+    },
+    "image": "/assets/images/enemies/davaeorn.png"
+  },
+  {
+    "id": "balor",
+    "name": {
+      "ja": "バロール（炎の悪魔）",
+      "en": "Balor (Fire Demon)"
+    },
+    "type": "boss",
+    "hp": 150,
+    "ac": -8,
+    "thac0": 0,
+    "xp": 15000,
+    "resistances": {
+      "physical": 50,
+      "fire": 100,
+      "cold": 50,
+      "electricity": 75,
+      "magic": 50
+    },
+    "vulnerabilities": {
+      "ja": ["冷気魔法", "+2以上の武器"],
+      "en": ["Cold magic", "+2 or better weapons"]
+    },
+    "strategy": {
+      "ja": "強力な悪魔。即死の剣、ファイアストーム、テレポートを使用。炎に完全耐性なので冷気魔法推奨。物理攻撃は+2以上必須。",
+      "en": "Powerful demon. Wields vorpal sword, uses Firestorm, teleports. Immune to fire, use cold magic. Requires +2 weapons for physical damage."
+    },
+    "location": {
+      "ja": "EET: ウォッチャーズ・キープ、地獄",
+      "en": "EET: Watcher's Keep, Hell"
+    },
+    "image": "/assets/images/enemies/balor.png"
+  },
+  {
+    "id": "vampire",
+    "name": {
+      "ja": "ヴァンパイア",
+      "en": "Vampire"
+    },
+    "type": "undead",
+    "hp": 65,
+    "ac": -2,
+    "thac0": 11,
+    "xp": 4000,
+    "resistances": {
+      "physical": 20,
+      "fire": 0,
+      "cold": 100,
+      "electricity": 100,
+      "magic": 50
+    },
+    "vulnerabilities": {
+      "ja": ["レベルドレイン対策", "アンデッド特効"],
+      "en": ["Level drain protection", "Undead-slaying weapons"]
+    },
+    "strategy": {
+      "ja": "レベルドレイン攻撃を使用（ネガティブ・プレーン・プロテクション必須）。ガスフォームで逃げる。物理耐性があるので魔法攻撃も併用。",
+      "en": "Uses level drain (Negative Plane Protection essential). Escapes via gaseous form. Has physical resistance, use magic attacks too."
+    },
+    "location": {
+      "ja": "EET: 墓地地区、ボドヒの隠れ家",
+      "en": "EET: Graveyard District, Bodhi's Lair"
+    },
+    "image": "/assets/images/enemies/vampire.png"
   }
 ]
